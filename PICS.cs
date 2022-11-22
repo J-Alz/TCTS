@@ -6,85 +6,61 @@ using System.Threading.Tasks;
 
 namespace TCTS
 {
-    internal class PICS
+    internal class PICS: modeloColas
     {
-        private bool poblacionFinita;
-        private int lambda;
-        private int miu;
-        private int servidores;
-        private int horasDiarias;
-
-        #region Probabilidad
-        PICS(bool poblacionFinita, int lambda, int miu, int servidores)
+        
+        private double ro;
+        PICS(double lambda, double miu)
         {
-            this.poblacionFinita = poblacionFinita;
-            this.lambda = lambda;
-            this.miu    = miu;
-            this.servidores = servidores;
-        }
-        public double ro()
-        {
-            //Probabilidad de hallar el sistema ocupado
-            //Utilizacion del sistema
-            //Probabilidad que tiene los usuarios de esperar para ser
-            //  atendidos
-            return lambda / miu;
-        }
-        public double PsubZero()
-        {
-            //Probabilidad de hallar sistema vacio u ocioso
-            //Probabilidad que tienen los usuarios de no esperar
-            //Probabilidad que tiene ser atendidos sin esperar en cola
-            return 1 - (lambda / miu);
-        }
-        public double PsubN(int nClientes)
-        {
-            if(poblacionFinita == true)
-                return 1;
-            else
-                return PsubZero() * Math.Pow((lambda / miu),nClientes);
-        }
-        #endregion
-
-        #region Esperado de clientes
-        public double L()
-        {
-            return lambda / (miu - lambda);
-        }
-        public double LsubQ()
-        {
-            return Math.Pow(lambda, 2) / (miu *(miu - lambda));
-        }
-        public double LsubN()
-        {
-            return lambda / (miu - lambda);
+            Lambda = lambda;
+            Miu = miu;
         }
 
-        #endregion
-
-        #region Tiempo Esperado
-
-        public double W()
+        public double Ro
         {
-            return 1 / (miu - lambda);
-        }
-        public double WsubQ()
-        {
-            return lambda / (miu * (miu - lambda));
-        }
-        public double WsubN()
-        {
-            return 1 / (miu - lambda);
+            get { return ro; }
+            set { ro = value; }
         }
 
-        #endregion
-
-        #region Costo Diario
-        public double CTsubTE()
+        public void calcRo()
         {
-            return lambda * horasDiarias * WsubQ();
-            ///no vale
+            Ro = Lambda / Miu;
         }
-        #endregion
+        public void calcPsubZero()
+        {
+            PsubZero = 1 - (Lambda / Miu);
+        }
+        public void calcPsubN()
+        {
+            PsubN = PsubZero * Math.Pow(Ro, 2);
+        }
+        public void calcL()
+        {
+            L = Lambda / (Miu - Lambda);
+        }
+        public void calcLsubQ()
+        {
+            LsubQ = Math.Pow(Lambda, 2) / (Miu * (Miu - Lambda));
+        }
+        public void calcLsubN()
+        {
+            LsubN = Lambda / (Miu - Lambda);
+        }
+        public void calcW()
+        {
+            W = 1 / (Miu - Lambda);
+        }
+        public void calcWsubQ()
+        {
+            WsubQ = Lambda / (Miu * (Miu - Lambda));
+        }
+        public void calcWsubN()
+        {
+            WsubN = 1 / (Miu - Lambda);
+        }
+
+        
+
+        
     }
 }

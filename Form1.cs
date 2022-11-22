@@ -9,8 +9,12 @@ namespace TCTS
 
         private void btResolver_Click(object sender, EventArgs e)
         {
-            FormResultado ventana = new FormResultado();
-            ventana.Show();
+            if (rbtInfinita.Checked && tbServidor.Text == "1")
+            {
+                FormPICS ventana = new FormPICS();
+                ventana.Show();
+            }
+            
         }
     }
 }
