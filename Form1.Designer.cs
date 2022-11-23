@@ -42,6 +42,7 @@
             this.rbtInfinita = new System.Windows.Forms.RadioButton();
             this.rbtFinita = new System.Windows.Forms.RadioButton();
             this.gbPoblacion = new System.Windows.Forms.GroupBox();
+            this.tbN = new System.Windows.Forms.TextBox();
             this.gbPoblacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +102,7 @@
             // 
             // tbLambda
             // 
-            this.tbLambda.Location = new System.Drawing.Point(134, 52);
+            this.tbLambda.Location = new System.Drawing.Point(157, 27);
             this.tbLambda.Name = "tbLambda";
             this.tbLambda.Size = new System.Drawing.Size(100, 23);
             this.tbLambda.TabIndex = 1;
@@ -109,7 +110,7 @@
             // 
             // tbMiu
             // 
-            this.tbMiu.Location = new System.Drawing.Point(12, 136);
+            this.tbMiu.Location = new System.Drawing.Point(157, 56);
             this.tbMiu.Name = "tbMiu";
             this.tbMiu.Size = new System.Drawing.Size(100, 23);
             this.tbMiu.TabIndex = 2;
@@ -117,7 +118,7 @@
             // 
             // tbServidor
             // 
-            this.tbServidor.Location = new System.Drawing.Point(134, 136);
+            this.tbServidor.Location = new System.Drawing.Point(157, 87);
             this.tbServidor.Name = "tbServidor";
             this.tbServidor.Size = new System.Drawing.Size(100, 23);
             this.tbServidor.TabIndex = 3;
@@ -125,7 +126,7 @@
             // 
             // btResolver
             // 
-            this.btResolver.Location = new System.Drawing.Point(122, 208);
+            this.btResolver.Location = new System.Drawing.Point(75, 176);
             this.btResolver.Name = "btResolver";
             this.btResolver.Size = new System.Drawing.Size(75, 23);
             this.btResolver.TabIndex = 4;
@@ -167,9 +168,18 @@
             this.gbPoblacion.TabStop = false;
             this.gbPoblacion.Text = "Población";
             // 
+            // tbN
+            // 
+            this.tbN.Location = new System.Drawing.Point(157, 116);
+            this.tbN.Name = "tbN";
+            this.tbN.Size = new System.Drawing.Size(100, 23);
+            this.tbN.TabIndex = 8;
+            this.tbN.Text = "n";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(291, 269);
+            this.Controls.Add(this.tbN);
             this.Controls.Add(this.gbPoblacion);
             this.Controls.Add(this.btResolver);
             this.Controls.Add(this.tbServidor);
@@ -200,5 +210,6 @@
         private RadioButton rbtInfinita;
         private RadioButton rbtFinita;
         private GroupBox gbPoblacion;
+        private TextBox tbN;
     }
 }

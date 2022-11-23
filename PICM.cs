@@ -37,8 +37,8 @@ namespace TCTS
             double sumatoria = 0;
             for(int i = 0; i < K - 1; i++)
             {
-                sumatoria += (1/t.fact(n)) * 
-                    Math.Pow(Lambda/Miu,N);
+                sumatoria += (1/t.fact(i)) * 
+                    Math.Pow(Lambda/Miu,i);
             }
             PsubZero = 1 / (sumatoria + 
                 (1/t.fact(K)*
