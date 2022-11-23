@@ -11,7 +11,7 @@ namespace TCTS
         private double lambda;
         private double miu;
         private double k;
-
+        private double n;
         private double psubZero;
         private double psubN;
         private double l;
@@ -35,6 +35,11 @@ namespace TCTS
         {
             get { return k; }
             set { k = value; }
+        }
+        public double N
+        {
+            get { return n; }
+            set { n = value; }
         }
         public double PsubZero
         {
@@ -73,7 +78,7 @@ namespace TCTS
         }
         public double WsubN
         {
-            get { return WsubN; }
+            get { return wsubN; }
             set { wsubN = value; }
         }
     }

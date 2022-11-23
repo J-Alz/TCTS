@@ -10,57 +10,79 @@ namespace TCTS
     {
         
         private double ro;
-        PICS(double lambda, double miu)
+        public PICS(double lambda, double miu, double n, double k)
         {
-            Lambda = lambda;
-            Miu = miu;
+            Lambda = lambda;            //a
+            Miu = miu;                  //b
+            K = k;                      //c
+            N = n;                      //d
+            Ro = calcRo();              //1
+            PsubZero = calcPsubZero();  //2
+            PsubN = calcPsubN();        //3 *
+            L = calcL();                //4
+            LsubQ = calcLsubQ();        //5
+            LsubN = calcLsubN();        //6
+            W = calcW();                //7
+            WsubQ = calcWsubQ();        //8
+            WsubN = calcWsubN();        //9
         }
 
+        #region get/Set
         public double Ro
         {
             get { return ro; }
             set { ro = value; }
         }
+        #endregion
 
-        public void calcRo()
+        public double calcRo()
         {
-            Ro = Lambda / Miu;
+            //P. hallar el sistema ocupado.
+            //Uso del sistema
+            //P. tienen los usuarios de esperar para ser atendidos
+            return Lambda / Miu;
         }
-        public void calcPsubZero()
+        public double calcPsubZero()
         {
-            PsubZero = 1 - (Lambda / Miu);
+            //P. hallar el sistema vacío u ocioso
+            //P. tienen los usuarios de no esperar o ser atendidos
+            //  sin esperar en cola
+            return 1 - Ro;
         }
-        public void calcPsubN()
+        public double calcPsubN()
         {
-            PsubN = PsubZero * Math.Pow(Ro, 2);
+            //P. hallar exactamente n clientes dentro del sistema
+            return PsubZero * Math.Pow(Ro, N);
         }
-        public void calcL()
+        public double calcL()
         {
-            L = Lambda / (Miu - Lambda);
+            //# esperado de clientes en el sistema
+            return  Lambda / (Miu - Lambda);
         }
-        public void calcLsubQ()
+        public double calcLsubQ()
         {
-            LsubQ = Math.Pow(Lambda, 2) / (Miu * (Miu - Lambda));
+            //# esperado de clientes en la cola
+            return Math.Pow(Lambda, 2) / (Miu * (Miu - Lambda));
         }
-        public void calcLsubN()
+        public double calcLsubN()
         {
-            LsubN = Lambda / (Miu - Lambda);
+            //# esperado de clientes en la cola no vacía
+            return Lambda / (Miu - Lambda);
         }
-        public void calcW()
+        public double calcW()
         {
-            W = 1 / (Miu - Lambda);
+            //Tiempo esperado en el sistema
+            return 1 / (Miu - Lambda);
         }
-        public void calcWsubQ()
+        public double calcWsubQ()
         {
-            WsubQ = Lambda / (Miu * (Miu - Lambda));
+            //Tiempo esperado en cola
+            return Lambda / (Miu * (Miu - Lambda));
         }
-        public void calcWsubN()
+        public double calcWsubN()
         {
-            WsubN = 1 / (Miu - Lambda);
+            //Tiempo esperado en cola para colas no vacías
+            return 1 / (Miu - Lambda);
         }
-
-        
-
-        
     }
 }

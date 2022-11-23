@@ -16,7 +16,20 @@ namespace TCTS
         {
             Lambda = lambda;
             Miu = miu;
+            PsubZero = calcPsubZero();
+            PsubN = calcPsubN();
+            PsubK = calcPsubK();
+            PsubNE = calcPsubNE();
+            L = calcL();
+            LsubQ = calcLsubQ();
+            LsubN = calcLsubN();
+            W = calcW();
+            WsubQ = calcWsubQ();
+            WsubN = calcWsubN();
+            
         }
+
+        #region get/set
         public int N
         {
             get { return n; }
@@ -32,7 +45,10 @@ namespace TCTS
             get { return psubNE; }
             set { psubNE = value; }
         }
-        public void calcPsubZero()
+
+        #endregion
+
+        public double calcPsubZero()
         {
             double sumatoria = 0;
             for(int i = 0; i < K - 1; i++)
@@ -40,64 +56,64 @@ namespace TCTS
                 sumatoria += (1/t.fact(i)) * 
                     Math.Pow(Lambda/Miu,i);
             }
-            PsubZero = 1 / (sumatoria + 
+            return 1 / (sumatoria + 
                 (1/t.fact(K)*
                 Math.Pow(Lambda/Miu,K)*
                 (K * Miu)/(K*Miu - Lambda)));
         }
-        public void calcPsubK()
+        public double calcPsubK()
         {
-            PsubK = (1 / t.fact(K)*
+            return (1 / t.fact(K)*
                 Math.Pow(Lambda/Miu,N)*
                 ((K*Miu)/(K*Miu - Lambda))* 
                 PsubZero);
         }
-        public void calcPsubNE()
+        public double calcPsubNE()
         {
-            PsubNE = 1 - PsubK;
+            return 1 - PsubK;
         }
-        public void calcPsubN()
+        public double calcPsubN()
         {
             if(N >= K)
             {
-                PsubN = (1 / t.fact(K) * Math.Pow(K, N - K)) *
+                return (1 / t.fact(K) * Math.Pow(K, N - K)) *
                     Math.Pow(Lambda / Miu, N) *
                     PsubZero;
             }
             else
             {
-                PsubN = (PsubZero / t.fact(N)) *
+                return (PsubZero / t.fact(N)) *
                     Math.Pow(Lambda/Miu,N);
             } 
         }
-        public void calcL()
+        public double calcL()
         {
-            L = (Lambda * Miu * Math.Pow(Lambda / Miu, K) /
+            return (Lambda * Miu * Math.Pow(Lambda / Miu, K) /
                 t.fact(K - 1) * Math.Pow(K * Miu - Lambda, 2) *
                 PsubZero) + (Lambda / Miu);
         }
-        public void calcLsubQ()
+        public double calcLsubQ()
         {
-            LsubQ = (Lambda * Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
+            return (Lambda * Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
                 (t.fact(K - 1)* Math.Pow(K * Miu - Lambda,2));
         }
-        public void calcLsubN()
+        public double calcLsubN()
         {
-            LsubN = LsubQ / PsubK;
+            return LsubQ / PsubK;
         }
-        public void calcW()
+        public double calcW()
         {
-            W = ((Miu * Math.Pow(Lambda / Miu, 2) * PsubZero) /
+            return ((Miu * Math.Pow(Lambda / Miu, 2) * PsubZero) /
                 t.fact(K-1)*Math.Pow(K * Miu - Lambda,2))+(1 /Miu);
         }
-        public void calcWsubQ()
+        public double calcWsubQ()
         {
-            WsubQ = (Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
+            return (Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
                 (t.fact(K -1)*Math.Pow(K * Miu - Lambda,2));
         }
-        public void calcWsubN()
+        public double calcWsubN()
         {
-            WsubN = WsubQ / PsubK;
+            return WsubQ / PsubK;
         }
     }
 }

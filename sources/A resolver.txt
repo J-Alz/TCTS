@@ -1,0 +1,5 @@
+* poner funcion de estabilidad
+
+* cuando no se conozca k se debe realizar una simulacion de 0 a k (mejor opcion)
+
+*corregir 0, que el programa detecte los ceros en cada tb
