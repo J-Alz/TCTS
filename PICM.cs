@@ -12,10 +12,12 @@ namespace TCTS
         int n;
         double psubK;
         double psubNE;
-        PICM(double lambda, double miu)
+        public PICM(int lambda, int miu, int k, int n)
         {
             Lambda = lambda;
             Miu = miu;
+            K = k;
+            N = n;
             PsubZero = calcPsubZero();
             PsubN = calcPsubN();
             PsubK = calcPsubK();

@@ -13,12 +13,13 @@ namespace TCTS
         double psubE;
         double psubNE;
         tools t = new tools();
-        PFCM(int lambda, int miu, int m, int n)
+        PFCM(int lambda, int miu, int k, int n, int m)
         {
             Lambda = lambda;
             Miu = miu;
             M = m;
             N = n;
+            K = k;
             PsubZero = calcPsubZero();
             PsubN = calcPsubN();
             psubE = calcPsubE();

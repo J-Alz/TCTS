@@ -1,5 +1,9 @@
-* poner funcion de estabilidad
+* poner funcion de estabilidad en ambos lados
 
 * cuando no se conozca k se debe realizar una simulacion de 0 a k (mejor opcion)
 
 *corregir 0, que el programa detecte los ceros en cada tb
+
+*Pn debe calcular en vector, entregar cierta cantidad de resultados
+
+*las lineas de espera en PICM y PICS son diferentes

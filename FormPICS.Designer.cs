@@ -56,6 +56,7 @@
             // 
             // tbPsubZero
             // 
+            this.tbPsubZero.Enabled = false;
             this.tbPsubZero.Location = new System.Drawing.Point(66, 73);
             this.tbPsubZero.Name = "tbPsubZero";
             this.tbPsubZero.PlaceholderText = "P₀";
@@ -64,6 +65,7 @@
             // 
             // tbPsubN
             // 
+            this.tbPsubN.Enabled = false;
             this.tbPsubN.Location = new System.Drawing.Point(66, 125);
             this.tbPsubN.Name = "tbPsubN";
             this.tbPsubN.PlaceholderText = "Pn";
@@ -72,6 +74,7 @@
             // 
             // tbL
             // 
+            this.tbL.Enabled = false;
             this.tbL.Location = new System.Drawing.Point(84, 27);
             this.tbL.Name = "tbL";
             this.tbL.PlaceholderText = "L";
@@ -80,6 +83,7 @@
             // 
             // tbLsubQ
             // 
+            this.tbLsubQ.Enabled = false;
             this.tbLsubQ.Location = new System.Drawing.Point(84, 73);
             this.tbLsubQ.Name = "tbLsubQ";
             this.tbLsubQ.PlaceholderText = "Lq";
@@ -88,6 +92,7 @@
             // 
             // tbLsubN
             // 
+            this.tbLsubN.Enabled = false;
             this.tbLsubN.Location = new System.Drawing.Point(84, 125);
             this.tbLsubN.Name = "tbLsubN";
             this.tbLsubN.PlaceholderText = "Ln";
@@ -96,6 +101,7 @@
             // 
             // tbW
             // 
+            this.tbW.Enabled = false;
             this.tbW.Location = new System.Drawing.Point(86, 27);
             this.tbW.Name = "tbW";
             this.tbW.PlaceholderText = "W";
@@ -104,6 +110,7 @@
             // 
             // tbWsubQ
             // 
+            this.tbWsubQ.Enabled = false;
             this.tbWsubQ.Location = new System.Drawing.Point(86, 73);
             this.tbWsubQ.Name = "tbWsubQ";
             this.tbWsubQ.PlaceholderText = "Wq";
@@ -112,6 +119,7 @@
             // 
             // tbWsubN
             // 
+            this.tbWsubN.Enabled = false;
             this.tbWsubN.Location = new System.Drawing.Point(86, 125);
             this.tbWsubN.Name = "tbWsubN";
             this.tbWsubN.PlaceholderText = "Wn";
@@ -120,6 +128,7 @@
             // 
             // tbRo
             // 
+            this.tbRo.Enabled = false;
             this.tbRo.Location = new System.Drawing.Point(66, 27);
             this.tbRo.Name = "tbRo";
             this.tbRo.PlaceholderText = "ρ";
