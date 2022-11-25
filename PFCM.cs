@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace TCTS
 {
-    internal class PFCM:modeloColas
+    internal class PFCM : modeloColas
     {
         int m;
-        int n;
         double psubE;
         double psubNE;
         tools t = new tools();
-        PFCM(int lambda, int miu, int k, int n, int m)
+        PFCM(double lambda, double miu, int k, int n, int m)
         {
             Lambda = lambda;
             Miu = miu;
             M = m;
-            N = n;
             K = k;
             PsubZero = calcPsubZero();
-            //PsubN = calcPsubN();
+            PsubN = calcPsubN(n);
             psubE = calcPsubE();
             psubNE = calcPsubNE();
             L = calcL();
@@ -38,11 +36,6 @@ namespace TCTS
             get { return m; }
             set { m = value; }
         }
-        public int N
-        {
-            get { return n; }
-            set { n = value; }
-        }
         public double PsubE
         {
             get { return psubE; }
@@ -55,44 +48,47 @@ namespace TCTS
         }
         #endregion
 
+        #region formulas
+        private double formula1(int n)
+        {
+            return (t.fact(M) / (t.fact(M - n) * t.fact(n))) * Math.Pow(Lambda/Miu,n);
+        }
+        private double formula2(int n)
+        {
+            return (t.fact(M)/(t.fact(M-n) * t.fact(K) * Math.Pow(K, n - K))) * Math.Pow(Lambda/Miu,n);
+        }
+        
+        #endregion
+
         public double calcPsubZero()
         {
             double sumatoria1 = 0;
             double sumatoria2 = 0;
-            for(int n = 0; n < K - 1; n++)
+            for(int i = 0; i <= K - 1; i++)
             {
-                sumatoria1 += (t.fact(M)/(t.fact(M - n) * t.fact(n)))*Math.Pow(Lambda/Miu,2);
+                sumatoria1 += formula1(i);
             }
-            for(int n = 0; n < K - 1; n++)
+            for(int i = K; i <= M; i++)
             {
-                sumatoria2 += (t.fact(M) / (t.fact(M - n) * t.fact(K) * Math.Pow(K, n - K))) *
-                    Math.Pow(Lambda/Miu,n);
+                sumatoria2 += formula2(i);
             }
             return 1 / (sumatoria1 + sumatoria2);
         }
-        public double calcPsubN()
+        public List<double> calcPsubN(int n)
         {
-            if(n >= 0 && n <= K)
+            List<double> lista = new List<double>();
+            for(int i = 1; i <= n; i++)
             {
-                return PsubZero * 
-                    (t.fact(M)/(t.fact(M - N)*t.fact(N)))*
-                    Math.Pow(Lambda/Miu,N);
+                if (n >= K && n <= M)
+                    lista.Add(PsubZero * formula2(n));
+                else
+                    lista.Add(PsubZero * formula1(n));
             }
-            else
-            {
-                return PsubZero *
-                    (t.fact(M) / (t.fact(M - N) * t.fact(K)*Math.Pow(K,N - K))) *
-                    Math.Pow(Lambda / Miu, N);
-            }
+            return lista;
         }
         public double calcPsubE()
         {
-            double sumatoria = 0;
-            for(int i = 0; i < K-1; i++)
-            {
-                //sumatoria += PsubN;//Not
-            }
-            return 1 - sumatoria;
+            
         }
         public double calcPsubNE()
         {

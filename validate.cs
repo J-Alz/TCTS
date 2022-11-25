@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TCTS
 {
-    internal class modeloBase
+    internal class validate
     {
         string lambda = "";
         string miu = "";

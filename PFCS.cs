@@ -9,7 +9,6 @@ namespace TCTS
     internal class PFCS:modeloColas
     {
         int m;
-        int n;
         double psubE;
         tools t = new tools();
         public PFCS(int lambda, int miu, int k, int n, int m)
@@ -17,11 +16,10 @@ namespace TCTS
             Lambda = lambda;
             Miu = miu;
             M = m;
-            N = n;
             K = k;
             PsubZero = calcPsubZero();
             PsubE = calcPsubE();
-            //PsubN = calcPsubN();
+            PsubN = calcPsubN(n);
             L = calcL();
             LsubQ = calcLsubQ();
             LsubN = calcLsubN();
@@ -36,11 +34,6 @@ namespace TCTS
             get { return m; }
             set { m = value; }
         }
-        public int N
-        {
-            get { return n; }
-            set { n = value; }
-        }
         public double PsubE
         {
             get { return psubE; }
@@ -48,12 +41,18 @@ namespace TCTS
         }
         #endregion
 
+        #region formulas
+        private double formula(int n){
+            return t.fact(M) / t.fact(M - n)! * Math.Pow(Lambda/Miu,n);
+        }
+        #endregion
+
         public double calcPsubZero()
         {
             double sumatoria = 0;
-            for(int n = 0; n < M; n++)
+            for (int i = 0; i <= M; i++)
             {
-                sumatoria +=(t.fact(M)/t.fact(M - n))*Math.Pow(Lambda/Miu,n);
+                sumatoria += formula(i);
             }
             return 1 / sumatoria;
         }
@@ -61,17 +60,20 @@ namespace TCTS
         {
             return 1 - PsubZero;
         }
-        public double calcPsubN()
+        public List<double> calcPsubN(int n)
         {
-            return (t.fact(M!)/t.fact(M - n)) * Math.Pow(Lambda/Miu,n) * PsubZero;
+            List<double> lista = new List<double>();
+            for(int i = 1; i <= n; i++)
+                lista.Add(formula(i) * PsubZero);
+            return lista;
         }
         public double calcL()
         {
-            return M - (Miu / Lambda) * (1 - PsubZero);
+            return M - (Miu / Lambda) * PsubE;
         }
         public double calcLsubQ()
         {
-            return M - ((Lambda + Miu) / Lambda) * (1 - PsubZero);
+            return M - ((Lambda + Miu) / Lambda) * PsubE;
         }
         public double calcLsubN()
         {
@@ -79,11 +81,11 @@ namespace TCTS
         }
         public double calcWsubQ()
         {
-            return LsubQ / (M - L) * Miu;
+            return LsubQ / ((M - L) * Miu);
         }
         public double calcW()
         {
-            return WsubQ + 1 / Miu;
+            return WsubQ + (1 / Miu);
         }
         public double calcWsubN()
         {

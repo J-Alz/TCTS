@@ -9,9 +9,9 @@ namespace TCTS
             tbPoblacion.Enabled = false;
             tbServidor.Focus();
         }
-        modeloBase o = new modeloBase();
-        bool condicionPoblacion = false;//infinita
-        bool condicionServidor = false;//1
+        validate o = new validate();
+        private bool condicionPoblacion = false;//infinita
+        private bool condicionServidor = false;//1
         private void btResolver_Click(object sender, EventArgs e)
         {
             if (rbtFinita.Checked)
