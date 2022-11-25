@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,6 +64,8 @@
             this.label9.Size = new System.Drawing.Size(18, 15);
             this.label9.TabIndex = 34;
             this.label9.Text = "P₀";
+            this.toolTip1.SetToolTip(this.label9, "■ Probabilidad de hallar el sistema vacío u ocioso.\r\n■ Probabilidad que tienen lo" +
+        "s usuarios de no esperar o de ser atendidos sin esperar en cola.");
             // 
             // label8
             // 
@@ -71,6 +75,7 @@
             this.label8.Size = new System.Drawing.Size(25, 15);
             this.label8.TabIndex = 33;
             this.label8.Text = "Wn";
+            this.toolTip1.SetToolTip(this.label8, "■ Tiempo esperado en cola para colas no vacías.");
             // 
             // label7
             // 
@@ -80,6 +85,7 @@
             this.label7.Size = new System.Drawing.Size(25, 15);
             this.label7.TabIndex = 32;
             this.label7.Text = "Wq";
+            this.toolTip1.SetToolTip(this.label7, "■ Tiempo esperado en cola.");
             // 
             // label6
             // 
@@ -89,6 +95,7 @@
             this.label6.Size = new System.Drawing.Size(18, 15);
             this.label6.TabIndex = 31;
             this.label6.Text = "W";
+            this.toolTip1.SetToolTip(this.label6, "■ Tiempo esperado en el sistema.");
             // 
             // label5
             // 
@@ -98,6 +105,7 @@
             this.label5.Size = new System.Drawing.Size(20, 15);
             this.label5.TabIndex = 30;
             this.label5.Text = "Ln";
+            this.toolTip1.SetToolTip(this.label5, "■ Número esperado de clientes en la cola no vacía.");
             // 
             // label4
             // 
@@ -107,6 +115,7 @@
             this.label4.Size = new System.Drawing.Size(20, 15);
             this.label4.TabIndex = 29;
             this.label4.Text = "Lq";
+            this.toolTip1.SetToolTip(this.label4, "■ Número esperado de clientes en la cola.");
             // 
             // label3
             // 
@@ -116,6 +125,7 @@
             this.label3.Size = new System.Drawing.Size(13, 15);
             this.label3.TabIndex = 28;
             this.label3.Text = "L";
+            this.toolTip1.SetToolTip(this.label3, "■ Número esperado de clientes en el sistema.");
             // 
             // label2
             // 
@@ -125,6 +135,7 @@
             this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 27;
             this.label2.Text = "Pn";
+            this.toolTip1.SetToolTip(this.label2, "■ Probabilidad de hallar exactamente n clientes dentro del sistema.");
             // 
             // tbWsubN
             // 
@@ -231,6 +242,8 @@
             this.label1.Size = new System.Drawing.Size(20, 15);
             this.label1.TabIndex = 38;
             this.label1.Text = "PE";
+            this.toolTip1.SetToolTip(this.label1, "■ Probabilidad de hallar el sistema ocupado.\r\n■ Uso del sistema.\r\n■ Probabilidad " +
+        "que tienen los usuarios de esperar para ser atendidos.");
             // 
             // groupBox2
             // 
@@ -305,5 +318,6 @@
         private GroupBox groupBox3;
         private TextBox textBox1;
         private Label label1;
+        private ToolTip toolTip1;
     }
 }

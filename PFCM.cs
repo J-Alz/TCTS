@@ -88,7 +88,7 @@ namespace TCTS
         }
         public double calcPsubE()
         {
-            
+            return 1;
         }
         public double calcPsubNE()
         {
@@ -108,7 +108,7 @@ namespace TCTS
             {
                 //sumatoria2 += (N - K) * PsubN;
             }
-            sumatoria3 = sumatoria1 / N;
+            sumatoria3 = sumatoria1 ;
             return sumatoria1 + sumatoria2 + K * (1 - sumatoria3);
         }
         public double calcLsubQ()

@@ -30,9 +30,11 @@ namespace TCTS
                 tbPsubN.Text += "P("+ (i+1) +") --> " +
                     pics.PsubN[i].ToString("N3")+string.Format(Environment.NewLine);
             }
+
             tbL.Text = pics.L.ToString("N2");
             tbLsubQ.Text = pics.LsubQ.ToString("N2");
             tbLsubN.Text = pics.LsubN.ToString("N2");
+
             tbW.Text = pics.W.ToString("N2");
             tbWsubQ.Text = pics.WsubQ.ToString("N2");
             tbWsubN.Text = pics.WsubN.ToString("N2");
