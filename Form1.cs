@@ -10,7 +10,6 @@ namespace TCTS
             tbServidor.Focus();
         }
         modeloBase o = new modeloBase();
-        int lambda, miu, k, n;
         bool condicionPoblacion = false;//infinita
         bool condicionServidor = false;//1
         private void btResolver_Click(object sender, EventArgs e)

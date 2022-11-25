@@ -21,7 +21,7 @@ namespace TCTS
             K = k;
             PsubZero = calcPsubZero();
             PsubE = calcPsubE();
-            PsubN = calcPsubN();
+            //PsubN = calcPsubN();
             L = calcL();
             LsubQ = calcLsubQ();
             LsubN = calcLsubN();

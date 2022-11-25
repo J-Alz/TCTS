@@ -9,17 +9,15 @@ namespace TCTS
     internal class PICM:modeloColas
     {
         tools t = new tools();
-        int n;
         double psubK;
         double psubNE;
-        public PICM(int lambda, int miu, int k, int n)
+        public PICM(double lambda, double miu, int k, int n)
         {
             Lambda = lambda;
             Miu = miu;
             K = k;
-            N = n;
             PsubZero = calcPsubZero();
-            PsubN = calcPsubN();
+            PsubN = calcPsubN(n);
             PsubK = calcPsubK();
             PsubNE = calcPsubNE();
             L = calcL();
@@ -32,11 +30,6 @@ namespace TCTS
         }
 
         #region get/set
-        public int N
-        {
-            get { return n; }
-            set { n = value; }
-        }
         public double PsubK
         {
             get { return psubK; }
@@ -50,54 +43,59 @@ namespace TCTS
 
         #endregion
 
+        #region formulas
+        private double formula1(int value)
+        {
+            return Math.Pow(Lambda / Miu, value) / t.fact(value);
+        }
+        private double formula2()
+        {
+            return (K * Miu) / (K * Miu - Lambda);
+        }
+        private double formula3()
+        {
+            return Miu * Math.Pow(Lambda / Miu, K);
+        }
+        private double formular4()
+        {
+            return t.fact(K - 1) * Math.Pow(K * Miu - Lambda, 2);
+        }
+        #endregion
+
         public double calcPsubZero()
         {
             double sumatoria = 0;
-            for(int i = 0; i < K - 1; i++)
+            for(int i = 0; i <= K - 1; i++)
             {
-                sumatoria += (1/t.fact(i)) * 
-                    Math.Pow(Lambda/Miu,i);
+                sumatoria += formula1(i);
             }
-            return 1 / (sumatoria + 
-                (1/t.fact(K)*
-                Math.Pow(Lambda/Miu,K)*
-                (K * Miu)/(K*Miu - Lambda)));
+            return 1 / (sumatoria + formula1(K) + formula2());
         }
         public double calcPsubK()
         {
-            return (1 / t.fact(K)*
-                Math.Pow(Lambda/Miu,N)*
-                ((K*Miu)/(K*Miu - Lambda))* 
-                PsubZero);
+            return formula1(K) * formula2() * PsubZero;
         }
         public double calcPsubNE()
         {
             return 1 - PsubK;
         }
-        public double calcPsubN()
+        public List<double> calcPsubN(int n)
         {
-            if(N >= K)
-            {
-                return (1 / t.fact(K) * Math.Pow(K, N - K)) *
-                    Math.Pow(Lambda / Miu, N) *
-                    PsubZero;
-            }
-            else
-            {
-                return (PsubZero / t.fact(N)) *
-                    Math.Pow(Lambda/Miu,N);
-            } 
+            List<double> result = new List<double>();
+            for(int i = 1; i <= n; i++)
+                if (i >= K)
+                    result.Add(PsubZero * formula1(i));
+                else
+                    result.Add(PsubZero * (Math.Pow(Lambda/Miu,i)/t.fact(K)) * 1/Math.Pow(K,i - K));
+            return result;
         }
         public double calcL()
         {
-            return (Lambda * Miu * Math.Pow(Lambda / Miu, K) /
-                t.fact(K - 1) * Math.Pow(K * Miu - Lambda, 2) *
-                PsubZero) + (Lambda / Miu);
+            return Lambda*formula3() / formular4() * PsubZero + (Lambda / Miu);
         }
         public double calcLsubQ()
         {
-            return (Lambda * Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
-                (t.fact(K - 1)* Math.Pow(K * Miu - Lambda,2));
+            return Lambda*formula3() / formular4() * PsubZero;
         }
         public double calcLsubN()
         {
@@ -105,13 +103,11 @@ namespace TCTS
         }
         public double calcW()
         {
-            return ((Miu * Math.Pow(Lambda / Miu, 2) * PsubZero) /
-                t.fact(K-1)*Math.Pow(K * Miu - Lambda,2))+(1 /Miu);
+            return formula3() / formular4() * PsubZero + (1 / Miu);
         }
         public double calcWsubQ()
         {
-            return (Miu * Math.Pow(Lambda / Miu, K) * PsubZero) /
-                (t.fact(K -1)*Math.Pow(K * Miu - Lambda,2));
+            return formula3() / formular4() * PsubZero;
         }
         public double calcWsubN()
         {

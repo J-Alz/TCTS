@@ -21,7 +21,7 @@ namespace TCTS
             N = n;
             K = k;
             PsubZero = calcPsubZero();
-            PsubN = calcPsubN();
+            //PsubN = calcPsubN();
             psubE = calcPsubE();
             psubNE = calcPsubNE();
             L = calcL();
@@ -90,7 +90,7 @@ namespace TCTS
             double sumatoria = 0;
             for(int i = 0; i < K-1; i++)
             {
-                sumatoria += PsubN;//Not
+                //sumatoria += PsubN;//Not
             }
             return 1 - sumatoria;
         }
@@ -106,11 +106,11 @@ namespace TCTS
 
             for(int i = 0; i < K-1; i++)
             {
-                sumatoria1 += N * PsubN;//Not
+                //sumatoria1 += N * PsubN;//Not
             }
             for(int i = 0; i < M; i++)
             {
-                sumatoria2 += (N - K) * PsubN;
+                //sumatoria2 += (N - K) * PsubN;
             }
             sumatoria3 = sumatoria1 / N;
             return sumatoria1 + sumatoria2 + K * (1 - sumatoria3);
@@ -120,7 +120,7 @@ namespace TCTS
             double sumatoria = 0;
             for (int i = 0; i < M; i++)
             {
-                sumatoria += (N - K) * PsubN;
+                //sumatoria += (N - K) * PsubN;
             }
             return sumatoria;
         }

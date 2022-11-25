@@ -45,12 +45,12 @@
             this.tbPsubN = new System.Windows.Forms.TextBox();
             this.tbPsubZero = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -130,73 +130,74 @@
             // 
             // tbWsubN
             // 
-            this.tbWsubN.Enabled = false;
             this.tbWsubN.Location = new System.Drawing.Point(79, 109);
             this.tbWsubN.Name = "tbWsubN";
             this.tbWsubN.PlaceholderText = "Wn";
+            this.tbWsubN.ReadOnly = true;
             this.tbWsubN.Size = new System.Drawing.Size(100, 23);
             this.tbWsubN.TabIndex = 26;
             // 
             // tbWsubQ
             // 
-            this.tbWsubQ.Enabled = false;
             this.tbWsubQ.Location = new System.Drawing.Point(79, 69);
             this.tbWsubQ.Name = "tbWsubQ";
             this.tbWsubQ.PlaceholderText = "Wq";
+            this.tbWsubQ.ReadOnly = true;
             this.tbWsubQ.Size = new System.Drawing.Size(100, 23);
             this.tbWsubQ.TabIndex = 25;
             // 
             // tbW
             // 
-            this.tbW.Enabled = false;
             this.tbW.Location = new System.Drawing.Point(79, 29);
             this.tbW.Name = "tbW";
             this.tbW.PlaceholderText = "W";
+            this.tbW.ReadOnly = true;
             this.tbW.Size = new System.Drawing.Size(100, 23);
             this.tbW.TabIndex = 24;
             // 
             // tbLsubN
             // 
-            this.tbLsubN.Enabled = false;
             this.tbLsubN.Location = new System.Drawing.Point(79, 109);
             this.tbLsubN.Name = "tbLsubN";
             this.tbLsubN.PlaceholderText = "Ln";
+            this.tbLsubN.ReadOnly = true;
             this.tbLsubN.Size = new System.Drawing.Size(100, 23);
             this.tbLsubN.TabIndex = 23;
             // 
             // tbLsubQ
             // 
-            this.tbLsubQ.Enabled = false;
             this.tbLsubQ.Location = new System.Drawing.Point(79, 69);
             this.tbLsubQ.Name = "tbLsubQ";
             this.tbLsubQ.PlaceholderText = "Lq";
+            this.tbLsubQ.ReadOnly = true;
             this.tbLsubQ.Size = new System.Drawing.Size(100, 23);
             this.tbLsubQ.TabIndex = 22;
             // 
             // tbL
             // 
-            this.tbL.Enabled = false;
             this.tbL.Location = new System.Drawing.Point(79, 32);
             this.tbL.Name = "tbL";
             this.tbL.PlaceholderText = "L";
+            this.tbL.ReadOnly = true;
             this.tbL.Size = new System.Drawing.Size(100, 23);
             this.tbL.TabIndex = 21;
             // 
             // tbPsubN
             // 
-            this.tbPsubN.Enabled = false;
             this.tbPsubN.Location = new System.Drawing.Point(72, 176);
+            this.tbPsubN.Multiline = true;
             this.tbPsubN.Name = "tbPsubN";
             this.tbPsubN.PlaceholderText = "Pn";
-            this.tbPsubN.Size = new System.Drawing.Size(100, 23);
+            this.tbPsubN.ReadOnly = true;
+            this.tbPsubN.Size = new System.Drawing.Size(100, 66);
             this.tbPsubN.TabIndex = 20;
             // 
             // tbPsubZero
             // 
-            this.tbPsubZero.Enabled = false;
             this.tbPsubZero.Location = new System.Drawing.Point(72, 29);
             this.tbPsubZero.Name = "tbPsubZero";
             this.tbPsubZero.PlaceholderText = "P₀";
+            this.tbPsubZero.ReadOnly = true;
             this.tbPsubZero.Size = new System.Drawing.Size(100, 23);
             this.tbPsubZero.TabIndex = 19;
             // 
@@ -216,6 +217,42 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Probabilidad";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(72, 131);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "PE";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 134);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 15);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "PE";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(72, 81);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "PNE";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 15);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "PNE";
             // 
             // groupBox2
             // 
@@ -247,42 +284,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tiempo esperado";
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(72, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "PNE";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 15);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "PNE";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(72, 131);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "PE";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 37;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 134);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 15);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "PE";
-            // 
             // FormPFCM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -292,7 +293,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormPFCM";
-            this.Text = "FormPFCM";
+            this.Text = "Población Finita Canal Múltiple";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

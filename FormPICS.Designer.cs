@@ -56,82 +56,83 @@
             // 
             // tbPsubZero
             // 
-            this.tbPsubZero.Enabled = false;
             this.tbPsubZero.Location = new System.Drawing.Point(66, 73);
             this.tbPsubZero.Name = "tbPsubZero";
             this.tbPsubZero.PlaceholderText = "P₀";
+            this.tbPsubZero.ReadOnly = true;
             this.tbPsubZero.Size = new System.Drawing.Size(100, 23);
             this.tbPsubZero.TabIndex = 0;
             // 
             // tbPsubN
             // 
-            this.tbPsubN.Enabled = false;
             this.tbPsubN.Location = new System.Drawing.Point(66, 125);
+            this.tbPsubN.Multiline = true;
             this.tbPsubN.Name = "tbPsubN";
             this.tbPsubN.PlaceholderText = "Pn";
-            this.tbPsubN.Size = new System.Drawing.Size(100, 23);
+            this.tbPsubN.ReadOnly = true;
+            this.tbPsubN.Size = new System.Drawing.Size(100, 123);
             this.tbPsubN.TabIndex = 1;
             // 
             // tbL
             // 
-            this.tbL.Enabled = false;
             this.tbL.Location = new System.Drawing.Point(84, 27);
             this.tbL.Name = "tbL";
             this.tbL.PlaceholderText = "L";
+            this.tbL.ReadOnly = true;
             this.tbL.Size = new System.Drawing.Size(100, 23);
             this.tbL.TabIndex = 2;
             // 
             // tbLsubQ
             // 
-            this.tbLsubQ.Enabled = false;
             this.tbLsubQ.Location = new System.Drawing.Point(84, 73);
             this.tbLsubQ.Name = "tbLsubQ";
             this.tbLsubQ.PlaceholderText = "Lq";
+            this.tbLsubQ.ReadOnly = true;
             this.tbLsubQ.Size = new System.Drawing.Size(100, 23);
             this.tbLsubQ.TabIndex = 3;
             // 
             // tbLsubN
             // 
-            this.tbLsubN.Enabled = false;
             this.tbLsubN.Location = new System.Drawing.Point(84, 125);
             this.tbLsubN.Name = "tbLsubN";
             this.tbLsubN.PlaceholderText = "Ln";
+            this.tbLsubN.ReadOnly = true;
             this.tbLsubN.Size = new System.Drawing.Size(100, 23);
             this.tbLsubN.TabIndex = 4;
             // 
             // tbW
             // 
-            this.tbW.Enabled = false;
             this.tbW.Location = new System.Drawing.Point(86, 27);
             this.tbW.Name = "tbW";
             this.tbW.PlaceholderText = "W";
+            this.tbW.ReadOnly = true;
             this.tbW.Size = new System.Drawing.Size(100, 23);
             this.tbW.TabIndex = 5;
             // 
             // tbWsubQ
             // 
-            this.tbWsubQ.Enabled = false;
             this.tbWsubQ.Location = new System.Drawing.Point(86, 73);
             this.tbWsubQ.Name = "tbWsubQ";
             this.tbWsubQ.PlaceholderText = "Wq";
+            this.tbWsubQ.ReadOnly = true;
             this.tbWsubQ.Size = new System.Drawing.Size(100, 23);
             this.tbWsubQ.TabIndex = 6;
             // 
             // tbWsubN
             // 
-            this.tbWsubN.Enabled = false;
             this.tbWsubN.Location = new System.Drawing.Point(86, 125);
             this.tbWsubN.Name = "tbWsubN";
             this.tbWsubN.PlaceholderText = "Wn";
+            this.tbWsubN.ReadOnly = true;
             this.tbWsubN.Size = new System.Drawing.Size(100, 23);
             this.tbWsubN.TabIndex = 7;
             // 
             // tbRo
             // 
-            this.tbRo.Enabled = false;
             this.tbRo.Location = new System.Drawing.Point(66, 27);
             this.tbRo.Name = "tbRo";
             this.tbRo.PlaceholderText = "ρ";
+            this.tbRo.ReadOnly = true;
             this.tbRo.Size = new System.Drawing.Size(100, 23);
             this.tbRo.TabIndex = 8;
             // 
@@ -226,7 +227,7 @@
             this.groupBox1.Controls.Add(this.tbPsubZero);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 165);
+            this.groupBox1.Size = new System.Drawing.Size(195, 283);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Probabilidad";
@@ -270,7 +271,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormPICS";
-            this.Text = " ";
+            this.Text = " Población Infinita Canal Simple";
             this.Load += new System.EventHandler(this.FormPICS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
