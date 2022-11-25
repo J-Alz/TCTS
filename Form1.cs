@@ -22,16 +22,28 @@ namespace TCTS
             o.Miu(tbMiu.Text);
             o.K(tbServidor.Text);
             o.N(tbN.Text);
-
+            o.M(tbPoblacion.Text);
 
             if(condicionPoblacion == false && condicionServidor == false)
             {
                 FormPICS ventana = new FormPICS(o.Lambda(),o.Miu(),o.K(),o.N());
                 ventana.Show();
             }
-
-
-
+            if (condicionPoblacion == false && condicionServidor == true)
+            {
+                FormPICM ventana = new FormPICM(o.Lambda(),o.Miu(),o.K(),o.N());
+                ventana.Show();
+            }
+            if (condicionPoblacion == true && condicionServidor == false)
+            {
+                FormPFCS ventana = new FormPFCS(o.Lambda(), o.Miu(), o.K(), o.N(), o.M());
+                ventana.Show();
+            }
+            if(condicionPoblacion == true && condicionServidor == true)
+            {
+                FormPFCM ventana = new FormPFCM(o.Lambda(),o.Miu(),o.K(),o.N(),o.M());
+                ventana.Show();
+            }
         }
 
         #region CheckedChanged

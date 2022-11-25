@@ -12,7 +12,7 @@ namespace TCTS
 {
     public partial class FormPFCS : Form
     {
-        public FormPFCS()
+        public FormPFCS(double lambda, double miu, int k, int n, int m)
         {
             InitializeComponent();
         }
