@@ -51,14 +51,25 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbCS = new System.Windows.Forms.TextBox();
+            this.tbCTSE = new System.Windows.Forms.TextBox();
+            this.tbCTS = new System.Windows.Forms.TextBox();
+            this.tbCTE = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btCalcularCosto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbPsubZero
             // 
-            this.tbPsubZero.Location = new System.Drawing.Point(66, 73);
+            this.tbPsubZero.Location = new System.Drawing.Point(42, 60);
             this.tbPsubZero.Name = "tbPsubZero";
             this.tbPsubZero.PlaceholderText = "P₀";
             this.tbPsubZero.ReadOnly = true;
@@ -67,17 +78,17 @@
             // 
             // tbPsubN
             // 
-            this.tbPsubN.Location = new System.Drawing.Point(66, 125);
+            this.tbPsubN.Location = new System.Drawing.Point(42, 90);
             this.tbPsubN.Multiline = true;
             this.tbPsubN.Name = "tbPsubN";
             this.tbPsubN.PlaceholderText = "Pn";
             this.tbPsubN.ReadOnly = true;
-            this.tbPsubN.Size = new System.Drawing.Size(100, 123);
+            this.tbPsubN.Size = new System.Drawing.Size(100, 159);
             this.tbPsubN.TabIndex = 1;
             // 
             // tbL
             // 
-            this.tbL.Location = new System.Drawing.Point(84, 27);
+            this.tbL.Location = new System.Drawing.Point(42, 30);
             this.tbL.Name = "tbL";
             this.tbL.PlaceholderText = "L";
             this.tbL.ReadOnly = true;
@@ -86,7 +97,7 @@
             // 
             // tbLsubQ
             // 
-            this.tbLsubQ.Location = new System.Drawing.Point(84, 73);
+            this.tbLsubQ.Location = new System.Drawing.Point(42, 60);
             this.tbLsubQ.Name = "tbLsubQ";
             this.tbLsubQ.PlaceholderText = "Lq";
             this.tbLsubQ.ReadOnly = true;
@@ -95,7 +106,7 @@
             // 
             // tbLsubN
             // 
-            this.tbLsubN.Location = new System.Drawing.Point(84, 125);
+            this.tbLsubN.Location = new System.Drawing.Point(42, 90);
             this.tbLsubN.Name = "tbLsubN";
             this.tbLsubN.PlaceholderText = "Ln";
             this.tbLsubN.ReadOnly = true;
@@ -104,7 +115,7 @@
             // 
             // tbW
             // 
-            this.tbW.Location = new System.Drawing.Point(86, 27);
+            this.tbW.Location = new System.Drawing.Point(42, 30);
             this.tbW.Name = "tbW";
             this.tbW.PlaceholderText = "W";
             this.tbW.ReadOnly = true;
@@ -113,7 +124,7 @@
             // 
             // tbWsubQ
             // 
-            this.tbWsubQ.Location = new System.Drawing.Point(86, 73);
+            this.tbWsubQ.Location = new System.Drawing.Point(42, 60);
             this.tbWsubQ.Name = "tbWsubQ";
             this.tbWsubQ.PlaceholderText = "Wq";
             this.tbWsubQ.ReadOnly = true;
@@ -122,7 +133,7 @@
             // 
             // tbWsubN
             // 
-            this.tbWsubN.Location = new System.Drawing.Point(86, 125);
+            this.tbWsubN.Location = new System.Drawing.Point(42, 90);
             this.tbWsubN.Name = "tbWsubN";
             this.tbWsubN.PlaceholderText = "Wn";
             this.tbWsubN.ReadOnly = true;
@@ -131,7 +142,7 @@
             // 
             // tbRo
             // 
-            this.tbRo.Location = new System.Drawing.Point(66, 27);
+            this.tbRo.Location = new System.Drawing.Point(42, 30);
             this.tbRo.Name = "tbRo";
             this.tbRo.PlaceholderText = "ρ";
             this.tbRo.ReadOnly = true;
@@ -141,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 30);
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 15);
             this.label1.TabIndex = 10;
@@ -152,7 +163,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 128);
+            this.label2.Location = new System.Drawing.Point(12, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 11;
@@ -162,7 +173,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 30);
+            this.label3.Location = new System.Drawing.Point(12, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 15);
             this.label3.TabIndex = 12;
@@ -172,7 +183,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 76);
+            this.label4.Location = new System.Drawing.Point(12, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 15);
             this.label4.TabIndex = 13;
@@ -182,7 +193,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 128);
+            this.label5.Location = new System.Drawing.Point(12, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 15);
             this.label5.TabIndex = 14;
@@ -192,7 +203,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 30);
+            this.label6.Location = new System.Drawing.Point(12, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 15);
             this.label6.TabIndex = 15;
@@ -202,7 +213,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 76);
+            this.label7.Location = new System.Drawing.Point(12, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(25, 15);
             this.label7.TabIndex = 16;
@@ -212,7 +223,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 128);
+            this.label8.Location = new System.Drawing.Point(12, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 15);
             this.label8.TabIndex = 17;
@@ -222,7 +233,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 76);
+            this.label9.Location = new System.Drawing.Point(12, 60);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(18, 15);
             this.label9.TabIndex = 18;
@@ -240,7 +251,7 @@
             this.groupBox1.Controls.Add(this.tbPsubZero);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 283);
+            this.groupBox1.Size = new System.Drawing.Size(160, 266);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Probabilidad";
@@ -253,9 +264,9 @@
             this.groupBox2.Controls.Add(this.tbLsubN);
             this.groupBox2.Controls.Add(this.tbLsubQ);
             this.groupBox2.Controls.Add(this.tbL);
-            this.groupBox2.Location = new System.Drawing.Point(213, 12);
+            this.groupBox2.Location = new System.Drawing.Point(178, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(195, 165);
+            this.groupBox2.Size = new System.Drawing.Size(160, 130);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "# esperado de clientes";
@@ -268,18 +279,118 @@
             this.groupBox3.Controls.Add(this.tbWsubN);
             this.groupBox3.Controls.Add(this.tbWsubQ);
             this.groupBox3.Controls.Add(this.tbW);
-            this.groupBox3.Location = new System.Drawing.Point(414, 12);
+            this.groupBox3.Location = new System.Drawing.Point(178, 148);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(195, 165);
+            this.groupBox3.Size = new System.Drawing.Size(160, 130);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tiempo esperado";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btCalcularCosto);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.tbCS);
+            this.groupBox4.Controls.Add(this.tbCTSE);
+            this.groupBox4.Controls.Add(this.tbCTS);
+            this.groupBox4.Controls.Add(this.tbCTE);
+            this.groupBox4.Location = new System.Drawing.Point(344, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(160, 189);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Costos";
+            // 
+            // tbCS
+            // 
+            this.tbCS.Location = new System.Drawing.Point(47, 120);
+            this.tbCS.Name = "tbCS";
+            this.tbCS.PlaceholderText = "CS";
+            this.tbCS.Size = new System.Drawing.Size(100, 23);
+            this.tbCS.TabIndex = 3;
+            // 
+            // tbCTSE
+            // 
+            this.tbCTSE.Location = new System.Drawing.Point(47, 90);
+            this.tbCTSE.Name = "tbCTSE";
+            this.tbCTSE.PlaceholderText = "CTSE";
+            this.tbCTSE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTSE.TabIndex = 2;
+            // 
+            // tbCTS
+            // 
+            this.tbCTS.Location = new System.Drawing.Point(47, 60);
+            this.tbCTS.Name = "tbCTS";
+            this.tbCTS.PlaceholderText = "CTS";
+            this.tbCTS.Size = new System.Drawing.Size(100, 23);
+            this.tbCTS.TabIndex = 1;
+            // 
+            // tbCTE
+            // 
+            this.tbCTE.Location = new System.Drawing.Point(47, 30);
+            this.tbCTE.Name = "tbCTE";
+            this.tbCTE.PlaceholderText = "CTE";
+            this.tbCTE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTE.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 15);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "CTSE";
+            this.toolTip1.SetToolTip(this.label10, "■ Costo unitario por tiempo de servicio");
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "CTS";
+            this.toolTip1.SetToolTip(this.label11, "■ Costo unitario por tiempo en el sistema");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(12, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 15);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "CTE";
+            this.toolTip1.SetToolTip(this.label12, "■ Costo unitario por tiempo en cola");
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 120);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 15);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "CS";
+            this.toolTip1.SetToolTip(this.label13, "■ Costo unitario por el servidor.");
+            // 
+            // btCalcularCosto
+            // 
+            this.btCalcularCosto.Location = new System.Drawing.Point(47, 149);
+            this.btCalcularCosto.Name = "btCalcularCosto";
+            this.btCalcularCosto.Size = new System.Drawing.Size(75, 23);
+            this.btCalcularCosto.TabIndex = 22;
+            this.btCalcularCosto.Text = "Calcular";
+            this.btCalcularCosto.UseVisualStyleBackColor = true;
             // 
             // FormPICS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 344);
+            this.ClientSize = new System.Drawing.Size(533, 291);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -292,6 +403,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +433,15 @@
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private ToolTip toolTip1;
+        private GroupBox groupBox4;
+        private TextBox tbCS;
+        private TextBox tbCTSE;
+        private TextBox tbCTS;
+        private TextBox tbCTE;
+        private Label label13;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Button btCalcularCosto;
     }
 }

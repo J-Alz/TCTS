@@ -42,7 +42,7 @@ namespace TCTS
         {
             return 1 - Ro;
         }
-        public List<double> calcPsubN(int n)
+        private List<double> calcPsubN(int n)
         {
             List<double> lista = new List<double>();
             if (n == 0)

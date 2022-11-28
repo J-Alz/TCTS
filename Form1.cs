@@ -18,6 +18,7 @@ namespace TCTS
                 condicionPoblacion = true; else condicionPoblacion = false;
             if (tbServidor.Text != "1")
                 condicionServidor = true; else condicionServidor = false;
+
             o.Lambda(tbLambda.Text);
             o.Miu(tbMiu.Text);
             o.K(tbServidor.Text);
@@ -31,7 +32,7 @@ namespace TCTS
             }
             if (condicionPoblacion == false && condicionServidor == true)
             {
-                FormPICM ventana = new FormPICM(o.Lambda(),o.Miu(),o.K(),o.N());
+                FormPICM ventana = new(o.Lambda(),o.Miu(),o.K(),o.N());
                 ventana.Show();
             }
             if (condicionPoblacion == true && condicionServidor == false)

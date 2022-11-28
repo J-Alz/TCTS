@@ -24,6 +24,7 @@ namespace TCTS
         private void FormPICM_Load(object sender, EventArgs e)
         {
             tbPsubZero.Text = picm.PsubZero.ToString();
+            
             for(int i = 0; i < n; i++)
             {
                 tbPsubN.Text += "P(" + (i + 1) + ") --> " +

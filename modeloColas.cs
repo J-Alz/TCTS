@@ -11,14 +11,14 @@ namespace TCTS
         private double lambda;
         private double miu;
         private int k;
-        private double psubZero;
-        private List<double> psubN = new List<double>();
+        private double p0;
+        private List<double> pn = new List<double>();
         private double l;
-        private double lsubQ;
-        private double lsubN;
+        private double lq;
+        private double ln;
         private double w;
-        private double wsubQ;
-        private double wsubN;
+        private double wq;
+        private double wn;
 
         #region get/set
         public double Lambda
@@ -44,8 +44,8 @@ namespace TCTS
         }
         public List<double> PsubN
         {
-            get { return psubN; }
-            set { psubN = value; }
+            get { return pN; }
+            set { pN = value; }
         }
         public double L
         {

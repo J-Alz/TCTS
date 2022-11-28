@@ -11,7 +11,7 @@ namespace TCTS
         int m;
         double psubE;
         tools t = new tools();
-        public PFCS(int lambda, int miu, int k, int n, int m)
+        public PFCS(double lambda, double miu, int k, int n, int m)
         {
             Lambda = lambda;
             Miu = miu;
