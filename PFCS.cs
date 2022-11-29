@@ -9,45 +9,44 @@ namespace TCTS
     internal class PFCS:modeloColas
     {
         int m;
-        double psubE;
-        tools t = new tools();
+        double pe;
         public PFCS(double lambda, double miu, int k, int n, int m)
         {
             Lambda = lambda;
             Miu = miu;
             M = m;
             K = k;
-            PsubZero = calcPsubZero();
-            PsubE = calcPsubE();
-            PsubN = calcPsubN(n);
-            L = calcL();
-            LsubQ = calcLsubQ();
-            LsubN = calcLsubN();
-            W = calcW();
-            WsubQ = calcWsubQ();
-            WsubN = calcWsubN();
+            P0 = calcularP0();
+            Pe = calcularPe();
+            Pn = calcularPn(n);
+            L = calcularL();
+            Lq = calcularLq();
+            Ln = calcularLn();
+            W = calcularW();
+            Wq = calcularWq();
+            Wn = calcularWn();
         }
 
-        #region get/set
+        #region get/set M, Pe
         public int M
         {
             get { return m; }
             set { m = value; }
         }
-        public double PsubE
+        public double Pe
         {
-            get { return psubE; }
-            set { psubE = value; }
+            get { return pe; }
+            set { pe = value; }
         }
         #endregion
 
         #region formulas
         private double formula(int n){
-            return t.fact(M) / t.fact(M - n)! * Math.Pow(Lambda/Miu,n);
+            return factorial(M) / factorial(M - n)! * Math.Pow(Lambda/Miu,n);
         }
         #endregion
 
-        public double calcPsubZero()
+        public double calcularP0()
         {
             double sumatoria = 0;
             for (int i = 0; i <= M; i++)
@@ -56,40 +55,40 @@ namespace TCTS
             }
             return 1 / sumatoria;
         }
-        public double calcPsubE()
+        public double calcularPe()
         {
-            return 1 - PsubZero;
+            return 1 - P0;
         }
-        public List<double> calcPsubN(int n)
+        public List<double> calcularPn(int n)
         {
             List<double> lista = new List<double>();
             for(int i = 1; i <= n; i++)
-                lista.Add(formula(i) * PsubZero);
+                lista.Add(formula(i) * P0);
             return lista;
         }
-        public double calcL()
+        public double calcularL()
         {
-            return M - (Miu / Lambda) * PsubE;
+            return M - (Miu / Lambda) * Pe;
         }
-        public double calcLsubQ()
+        public double calcularLq()
         {
-            return M - ((Lambda + Miu) / Lambda) * PsubE;
+            return M - ((Lambda + Miu) / Lambda) * Pe;
         }
-        public double calcLsubN()
+        public double calcularLn()
         {
-            return LsubQ / PsubE;
+            return Lq / Pe;
         }
-        public double calcWsubQ()
+        public double calcularWq()
         {
-            return LsubQ / ((M - L) * Miu);
+            return Lq / ((M - L) * Miu);
         }
-        public double calcW()
+        public double calcularW()
         {
-            return WsubQ + (1 / Miu);
+            return Wq + (1 / Miu);
         }
-        public double calcWsubN()
+        public double calcularWn()
         {
-            return WsubQ / PsubE;
+            return Wq / Pe;
         }
     }
 }

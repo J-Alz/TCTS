@@ -8,37 +8,36 @@ namespace TCTS
 {
     internal class PICM:modeloColas
     {
-        tools t = new tools();
-        double psubK;
-        double psubNE;
+        double pk;
+        double pNe;
         public PICM(double lambda, double miu, int k, int n)
         {
             Lambda = lambda;
             Miu = miu;
             K = k;
-            PsubZero = calcPsubZero();
-            PsubN = calcPsubN(n);
-            PsubK = calcPsubK();
-            PsubNE = calcPsubNE();
-            L = calcL();
-            LsubQ = calcLsubQ();
-            LsubN = calcLsubN();
-            W = calcW();
-            WsubQ = calcWsubQ();
-            WsubN = calcWsubN();
+            P0 = calcularP0();
+            Pn = calcularPn(n);
+            Pk = calcularPk();
+            PNe = calcularPNe();
+            L = calcularL();
+            Lq = calcularLq();
+            Ln = calcularLn();
+            W = calcularW();
+            Wq = calcularWq();
+            Wn = calcularWn();
             
         }
 
-        #region get/set
-        public double PsubK
+        #region get/set pK, PNe
+        public double Pk
         {
-            get { return psubK; }
-            set { psubK = value; }
+            get { return pk; }
+            set { pk = value; }
         }
-        public double PsubNE
+        public double PNe
         {
-            get { return psubNE; }
-            set { psubNE = value; }
+            get { return pNe; }
+            set { pNe = value; }
         }
 
         #endregion
@@ -46,7 +45,7 @@ namespace TCTS
         #region formulas
         private double formula1(int value)
         {
-            return Math.Pow(Lambda / Miu, value) / t.fact(value);
+            return Math.Pow(Lambda / Miu, value) / factorial(value);
         }
         private double formula2()
         {
@@ -58,11 +57,11 @@ namespace TCTS
         }
         private double formular4()
         {
-            return t.fact(K - 1) * Math.Pow(K * Miu - Lambda, 2);
+            return factorial(K - 1) * Math.Pow(K * Miu - Lambda, 2);
         }
         #endregion
 
-        public double calcPsubZero()
+        public double calcularP0()
         {
             double sumatoria = 0;
             for(int i = 0; i <= K - 1; i++)
@@ -71,47 +70,47 @@ namespace TCTS
             }
             return 1 / (sumatoria + formula1(K) + formula2());
         }
-        public double calcPsubK()
+        public double calcularPk()
         {
-            return formula1(K) * formula2() * PsubZero;
+            return formula1(K) * formula2() * P0;
         }
-        public double calcPsubNE()
+        public double calcularPNe()
         {
-            return 1 - PsubK;
+            return 1 - Pk;
         }
-        public List<double> calcPsubN(int n)
+        public List<double> calcularPn(int n)
         {
             List<double> result = new List<double>();
             for(int i = 1; i <= n; i++)
                 if (i >= K)
-                    result.Add(PsubZero * formula1(i));
+                    result.Add(0 * formula1(i));
                 else
-                    result.Add(PsubZero * (Math.Pow(Lambda/Miu,i)/t.fact(K)) * 1/Math.Pow(K,i - K));
+                    result.Add(P0 * (Math.Pow(Lambda/Miu,i)/factorial(K)) * (1/Math.Pow(K,i - K)));
             return result;
         }
-        public double calcL()
+        public double calcularL()
         {
-            return Lambda*formula3() / formular4() * PsubZero + (Lambda / Miu);
+            return Lambda*formula3() / formular4() * P0 + (Lambda / Miu);
         }
-        public double calcLsubQ()
+        public double calcularLq()
         {
-            return Lambda*formula3() / formular4() * PsubZero;
+            return Lambda*formula3() / formular4() * P0;
         }
-        public double calcLsubN()
+        public double calcularLn()
         {
-            return LsubQ / PsubK;
+            return Lq / Pk;
         }
-        public double calcW()
+        public double calcularW()
         {
-            return formula3() / formular4() * PsubZero + (1 / Miu);
+            return formula3() / formular4() * P0 + (1 / Miu);
         }
-        public double calcWsubQ()
+        public double calcularWq()
         {
-            return formula3() / formular4() * PsubZero;
+            return formula3() / formular4() * P0;
         }
-        public double calcWsubN()
+        public double calcularWn()
         {
-            return WsubQ / PsubK;
+            return Wq / Pk;
         }
     }
 }

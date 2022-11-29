@@ -24,7 +24,7 @@ namespace TCTS
             o.K(tbServidor.Text);
             o.N(tbN.Text);
             o.M(tbPoblacion.Text);
-
+            //que N no acepte 0
             if(condicionPoblacion == false && condicionServidor == false)
             {
                 FormPICS ventana = new FormPICS(o.Lambda(),o.Miu(),o.K(),o.N());

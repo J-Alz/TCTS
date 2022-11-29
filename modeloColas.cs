@@ -37,46 +37,59 @@ namespace TCTS
             set { k = value; }
         }
         
-        public double PsubZero
+        public double P0
         {
-            get { return psubZero; }
-            set { psubZero = value; }
+            get { return p0; }
+            set { p0 = value; }
         }
-        public List<double> PsubN
+        public List<double> Pn
         {
-            get { return pN; }
-            set { pN = value; }
+            get { return pn; }
+            set { pn = value; }
         }
         public double L
         {
             get { return l; }
             set { l = value; }
         }
-        public double LsubQ
+        public double Lq
         {
-            get { return lsubQ; }
-            set { lsubQ = value; }
+            get { return lq; }
+            set { lq = value; }
         }
-        public double LsubN
+        public double Ln
         {
-            get { return lsubN; }
-            set { lsubN = value; }
+            get { return ln; }
+            set { ln = value; }
         }
         public double W
         {
             get { return w; }
             set { w = value; }
         }
-        public double WsubQ
+        public double Wq
         {
-            get { return wsubQ; }
-            set { wsubQ = value; }
+            get { return wq; }
+            set { wq = value; }
         }
-        public double WsubN
+        public double Wn
         {
-            get { return wsubN; }
-            set { wsubN = value; }
+            get { return wn; }
+            set { wn = value; }
         }
         #endregion
+
+        public double factorial(int value)
+        {
+            if (value == 0)
+                return 1;
+
+            int result = 1;
+            for(int i = 1; i <= value; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
     }
 }
