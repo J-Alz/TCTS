@@ -22,22 +22,7 @@ namespace TCTS
 
         private void FormPFCM_Load(object sender, EventArgs e)
         {
-            tbPsubZero.Text = pfcm.PsubZero.ToString();
-            tbPsubE.Text = pfcm.PsubE.ToString();
-            tbPsubNE.Text = pfcm.PsubNE.ToString();
-            for(int i = 0; i < n; i++)
-            {
-                tbPsubN.Text += "P(" + (i + 1) + ") --> " +
-                    pfcm.PsubN[i].ToString("N3") + string.Format(Environment.NewLine);
-            }
-
-            tbL.Text = pfcm.L.ToString();
-            tbLsubQ.Text = pfcm.LsubQ.ToString();
-            tbLsubN.Text = pfcm.LsubN.ToString();
-
-            tbW.Text = pfcm.W.ToString();
-            tbWsubQ.Text = pfcm.WsubQ.ToString();
-            tbWsubN.Text = pfcm.WsubN.ToString();
+           
             /*
             */
         }

@@ -68,9 +68,12 @@ namespace TCTS
         }
 
         #region TextChanged
+        //regex usado anteriormente ^[1-9]{0,10}$
         private void tbServidor_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tbServidor.Text, "^[0-9]{0,10}$"))
+            //puede haber de 1 servidor para adelante
+            //*error, debe aceptar el 0 luego de otro nùmero
+            if (!Regex.IsMatch(tbServidor.Text, "^[1-9]\\d*$"))
             {
                 tbServidor.Clear();
             }
@@ -78,28 +81,32 @@ namespace TCTS
         }
         private void tbPoblacion_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tbPoblacion.Text, "^[0-9]{0,10}$"))
+            //debe aceptar valores desde 1 para adelante
+            if (!Regex.IsMatch(tbPoblacion.Text, "^[1-9]\\d*$"))
             {
                 tbPoblacion.Clear();
             }
         }
         private void tbLambda_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tbLambda.Text, "^[0-9]{0,10}$"))
+            //es un nùmero decimal, no entero
+            if (!Regex.IsMatch(tbLambda.Text, "^[0-9]+([.])?([0-9]+)?$"))
             {
                 tbLambda.Clear();
             }
         }
         private void tbMiu_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tbMiu.Text, "^[0-9]{0,10}$"))
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbMiu.Text, "^[0-9]+([.])?([0-9]+)?$"))
             {
                 tbMiu.Clear();
             }
         }
         private void tbN_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(tbN.Text, "^[0-9]{0,10}$"))
+            //se aceptan valores de 1 para adelante
+            if (!Regex.IsMatch(tbN.Text, "^[1-9]\\d*$"))
             {
                 tbN.Clear();
             }
