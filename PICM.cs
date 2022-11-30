@@ -61,7 +61,7 @@ namespace TCTS
         }
         #endregion
 
-        public double calcularP0()
+        private double calcularP0()
         {
             double sumatoria = 0;
             for(int i = 0; i <= K - 1; i++)
@@ -70,15 +70,15 @@ namespace TCTS
             }
             return 1 / (sumatoria + formula1(K) + formula2());
         }
-        public double calcularPk()
+        private double calcularPk()
         {
             return formula1(K) * formula2() * P0;
         }
-        public double calcularPNe()
+        private double calcularPNe()
         {
             return 1 - Pk;
         }
-        public List<double> calcularPn(int n)
+        private List<double> calcularPn(int n)
         {
             List<double> result = new List<double>();
             for(int i = 1; i <= n; i++)
@@ -88,27 +88,27 @@ namespace TCTS
                     result.Add(P0 * (Math.Pow(Lambda/Miu,i)/factorial(K)) * (1/Math.Pow(K,i - K)));
             return result;
         }
-        public double calcularL()
+        private double calcularL()
         {
             return Lambda*formula3() / formular4() * P0 + (Lambda / Miu);
         }
-        public double calcularLq()
+        private double calcularLq()
         {
             return Lambda*formula3() / formular4() * P0;
         }
-        public double calcularLn()
+        private double calcularLn()
         {
             return Lq / Pk;
         }
-        public double calcularW()
+        private double calcularW()
         {
             return formula3() / formular4() * P0 + (1 / Miu);
         }
-        public double calcularWq()
+        private double calcularWq()
         {
             return formula3() / formular4() * P0;
         }
-        public double calcularWn()
+        private double calcularWn()
         {
             return Wq / Pk;
         }

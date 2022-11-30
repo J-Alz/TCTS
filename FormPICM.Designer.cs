@@ -37,18 +37,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbWsubN = new System.Windows.Forms.TextBox();
-            this.tbWsubQ = new System.Windows.Forms.TextBox();
+            this.tbWn = new System.Windows.Forms.TextBox();
+            this.tbWq = new System.Windows.Forms.TextBox();
             this.tbW = new System.Windows.Forms.TextBox();
-            this.tbLsubN = new System.Windows.Forms.TextBox();
-            this.tbLsubQ = new System.Windows.Forms.TextBox();
+            this.tbLn = new System.Windows.Forms.TextBox();
+            this.tbLq = new System.Windows.Forms.TextBox();
             this.tbL = new System.Windows.Forms.TextBox();
-            this.tbPsubN = new System.Windows.Forms.TextBox();
-            this.tbPsubZero = new System.Windows.Forms.TextBox();
+            this.tbPn = new System.Windows.Forms.TextBox();
+            this.tbP0 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbPsubNE = new System.Windows.Forms.TextBox();
+            this.tbPNe = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.tbPsubK = new System.Windows.Forms.TextBox();
+            this.tbPk = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -139,23 +139,23 @@
             this.label2.Text = "Pn";
             this.toolTip1.SetToolTip(this.label2, "■ Probabilidad de hallar exactamente n clientes dentro del sistema.");
             // 
-            // tbWsubN
+            // tbWn
             // 
-            this.tbWsubN.Location = new System.Drawing.Point(42, 90);
-            this.tbWsubN.Name = "tbWsubN";
-            this.tbWsubN.PlaceholderText = "Wn";
-            this.tbWsubN.ReadOnly = true;
-            this.tbWsubN.Size = new System.Drawing.Size(100, 23);
-            this.tbWsubN.TabIndex = 26;
+            this.tbWn.Location = new System.Drawing.Point(42, 90);
+            this.tbWn.Name = "tbWn";
+            this.tbWn.PlaceholderText = "Wn";
+            this.tbWn.ReadOnly = true;
+            this.tbWn.Size = new System.Drawing.Size(100, 23);
+            this.tbWn.TabIndex = 26;
             // 
-            // tbWsubQ
+            // tbWq
             // 
-            this.tbWsubQ.Location = new System.Drawing.Point(42, 60);
-            this.tbWsubQ.Name = "tbWsubQ";
-            this.tbWsubQ.PlaceholderText = "Wq";
-            this.tbWsubQ.ReadOnly = true;
-            this.tbWsubQ.Size = new System.Drawing.Size(100, 23);
-            this.tbWsubQ.TabIndex = 25;
+            this.tbWq.Location = new System.Drawing.Point(42, 60);
+            this.tbWq.Name = "tbWq";
+            this.tbWq.PlaceholderText = "Wq";
+            this.tbWq.ReadOnly = true;
+            this.tbWq.Size = new System.Drawing.Size(100, 23);
+            this.tbWq.TabIndex = 25;
             // 
             // tbW
             // 
@@ -166,23 +166,23 @@
             this.tbW.Size = new System.Drawing.Size(100, 23);
             this.tbW.TabIndex = 24;
             // 
-            // tbLsubN
+            // tbLn
             // 
-            this.tbLsubN.Location = new System.Drawing.Point(42, 90);
-            this.tbLsubN.Name = "tbLsubN";
-            this.tbLsubN.PlaceholderText = "Ln";
-            this.tbLsubN.ReadOnly = true;
-            this.tbLsubN.Size = new System.Drawing.Size(100, 23);
-            this.tbLsubN.TabIndex = 23;
+            this.tbLn.Location = new System.Drawing.Point(42, 90);
+            this.tbLn.Name = "tbLn";
+            this.tbLn.PlaceholderText = "Ln";
+            this.tbLn.ReadOnly = true;
+            this.tbLn.Size = new System.Drawing.Size(100, 23);
+            this.tbLn.TabIndex = 23;
             // 
-            // tbLsubQ
+            // tbLq
             // 
-            this.tbLsubQ.Location = new System.Drawing.Point(42, 60);
-            this.tbLsubQ.Name = "tbLsubQ";
-            this.tbLsubQ.PlaceholderText = "Lq";
-            this.tbLsubQ.ReadOnly = true;
-            this.tbLsubQ.Size = new System.Drawing.Size(100, 23);
-            this.tbLsubQ.TabIndex = 22;
+            this.tbLq.Location = new System.Drawing.Point(42, 60);
+            this.tbLq.Name = "tbLq";
+            this.tbLq.PlaceholderText = "Lq";
+            this.tbLq.ReadOnly = true;
+            this.tbLq.Size = new System.Drawing.Size(100, 23);
+            this.tbLq.TabIndex = 22;
             // 
             // tbL
             // 
@@ -193,33 +193,33 @@
             this.tbL.Size = new System.Drawing.Size(100, 23);
             this.tbL.TabIndex = 21;
             // 
-            // tbPsubN
+            // tbPn
             // 
-            this.tbPsubN.Location = new System.Drawing.Point(47, 120);
-            this.tbPsubN.Multiline = true;
-            this.tbPsubN.Name = "tbPsubN";
-            this.tbPsubN.PlaceholderText = "Pn";
-            this.tbPsubN.ReadOnly = true;
-            this.tbPsubN.Size = new System.Drawing.Size(100, 129);
-            this.tbPsubN.TabIndex = 20;
+            this.tbPn.Location = new System.Drawing.Point(47, 120);
+            this.tbPn.Multiline = true;
+            this.tbPn.Name = "tbPn";
+            this.tbPn.PlaceholderText = "Pn";
+            this.tbPn.ReadOnly = true;
+            this.tbPn.Size = new System.Drawing.Size(100, 129);
+            this.tbPn.TabIndex = 20;
             // 
-            // tbPsubZero
+            // tbP0
             // 
-            this.tbPsubZero.Location = new System.Drawing.Point(47, 30);
-            this.tbPsubZero.Name = "tbPsubZero";
-            this.tbPsubZero.PlaceholderText = "P₀";
-            this.tbPsubZero.ReadOnly = true;
-            this.tbPsubZero.Size = new System.Drawing.Size(100, 23);
-            this.tbPsubZero.TabIndex = 19;
+            this.tbP0.Location = new System.Drawing.Point(47, 30);
+            this.tbP0.Name = "tbP0";
+            this.tbP0.PlaceholderText = "P₀";
+            this.tbP0.ReadOnly = true;
+            this.tbP0.Size = new System.Drawing.Size(100, 23);
+            this.tbP0.TabIndex = 19;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbPsubNE);
+            this.groupBox1.Controls.Add(this.tbPNe);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.tbPsubK);
+            this.groupBox1.Controls.Add(this.tbPk);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tbPsubZero);
-            this.groupBox1.Controls.Add(this.tbPsubN);
+            this.groupBox1.Controls.Add(this.tbP0);
+            this.groupBox1.Controls.Add(this.tbPn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -229,14 +229,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Probabilidad";
             // 
-            // tbPsubNE
+            // tbPNe
             // 
-            this.tbPsubNE.Location = new System.Drawing.Point(47, 90);
-            this.tbPsubNE.Name = "tbPsubNE";
-            this.tbPsubNE.PlaceholderText = "PNE";
-            this.tbPsubNE.ReadOnly = true;
-            this.tbPsubNE.Size = new System.Drawing.Size(100, 23);
-            this.tbPsubNE.TabIndex = 37;
+            this.tbPNe.Location = new System.Drawing.Point(47, 90);
+            this.tbPNe.Name = "tbPNe";
+            this.tbPNe.PlaceholderText = "PNE";
+            this.tbPNe.ReadOnly = true;
+            this.tbPNe.Size = new System.Drawing.Size(100, 23);
+            this.tbPNe.TabIndex = 37;
             // 
             // label10
             // 
@@ -248,14 +248,14 @@
             this.label10.Text = "PNE";
             this.toolTip1.SetToolTip(this.label10, "■ Probabilidad de que un usuario que llega no tenga que esperar.");
             // 
-            // tbPsubK
+            // tbPk
             // 
-            this.tbPsubK.Location = new System.Drawing.Point(47, 60);
-            this.tbPsubK.Name = "tbPsubK";
-            this.tbPsubK.PlaceholderText = "Pk";
-            this.tbPsubK.ReadOnly = true;
-            this.tbPsubK.Size = new System.Drawing.Size(100, 23);
-            this.tbPsubK.TabIndex = 37;
+            this.tbPk.Location = new System.Drawing.Point(47, 60);
+            this.tbPk.Name = "tbPk";
+            this.tbPk.PlaceholderText = "Pk";
+            this.tbPk.ReadOnly = true;
+            this.tbPk.Size = new System.Drawing.Size(100, 23);
+            this.tbPk.TabIndex = 37;
             // 
             // label1
             // 
@@ -271,8 +271,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tbL);
-            this.groupBox2.Controls.Add(this.tbLsubQ);
-            this.groupBox2.Controls.Add(this.tbLsubN);
+            this.groupBox2.Controls.Add(this.tbLq);
+            this.groupBox2.Controls.Add(this.tbLn);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
@@ -285,9 +285,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.tbWsubN);
+            this.groupBox3.Controls.Add(this.tbWn);
             this.groupBox3.Controls.Add(this.tbW);
-            this.groupBox3.Controls.Add(this.tbWsubQ);
+            this.groupBox3.Controls.Add(this.tbWq);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
@@ -329,20 +329,20 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox tbWsubN;
-        private TextBox tbWsubQ;
+        private TextBox tbWn;
+        private TextBox tbWq;
         private TextBox tbW;
-        private TextBox tbLsubN;
-        private TextBox tbLsubQ;
+        private TextBox tbLn;
+        private TextBox tbLq;
         private TextBox tbL;
-        private TextBox tbPsubN;
-        private TextBox tbPsubZero;
+        private TextBox tbPn;
+        private TextBox tbP0;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
-        private TextBox tbPsubNE;
+        private TextBox tbPNe;
         private Label label10;
-        private TextBox tbPsubK;
+        private TextBox tbPk;
         private Label label1;
         private ToolTip toolTip1;
     }

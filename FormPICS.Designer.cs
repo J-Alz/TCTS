@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tbPsubZero = new System.Windows.Forms.TextBox();
-            this.tbPsubN = new System.Windows.Forms.TextBox();
+            this.tbP0 = new System.Windows.Forms.TextBox();
+            this.tbPn = new System.Windows.Forms.TextBox();
             this.tbL = new System.Windows.Forms.TextBox();
-            this.tbLsubQ = new System.Windows.Forms.TextBox();
-            this.tbLsubN = new System.Windows.Forms.TextBox();
+            this.tbLq = new System.Windows.Forms.TextBox();
+            this.tbLn = new System.Windows.Forms.TextBox();
             this.tbW = new System.Windows.Forms.TextBox();
-            this.tbWsubQ = new System.Windows.Forms.TextBox();
-            this.tbWsubN = new System.Windows.Forms.TextBox();
+            this.tbWq = new System.Windows.Forms.TextBox();
+            this.tbWn = new System.Windows.Forms.TextBox();
             this.tbRo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,40 +51,40 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tbCS = new System.Windows.Forms.TextBox();
-            this.tbCTSE = new System.Windows.Forms.TextBox();
-            this.tbCTS = new System.Windows.Forms.TextBox();
-            this.tbCTE = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btCalcularCosto = new System.Windows.Forms.Button();
+            this.tbCS = new System.Windows.Forms.TextBox();
+            this.tbCTSE = new System.Windows.Forms.TextBox();
+            this.tbCTS = new System.Windows.Forms.TextBox();
+            this.tbCTE = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbPsubZero
+            // tbP0
             // 
-            this.tbPsubZero.Location = new System.Drawing.Point(42, 60);
-            this.tbPsubZero.Name = "tbPsubZero";
-            this.tbPsubZero.PlaceholderText = "P₀";
-            this.tbPsubZero.ReadOnly = true;
-            this.tbPsubZero.Size = new System.Drawing.Size(100, 23);
-            this.tbPsubZero.TabIndex = 0;
+            this.tbP0.Location = new System.Drawing.Point(42, 60);
+            this.tbP0.Name = "tbP0";
+            this.tbP0.PlaceholderText = "P₀";
+            this.tbP0.ReadOnly = true;
+            this.tbP0.Size = new System.Drawing.Size(100, 23);
+            this.tbP0.TabIndex = 0;
             // 
-            // tbPsubN
+            // tbPn
             // 
-            this.tbPsubN.Location = new System.Drawing.Point(42, 90);
-            this.tbPsubN.Multiline = true;
-            this.tbPsubN.Name = "tbPsubN";
-            this.tbPsubN.PlaceholderText = "Pn";
-            this.tbPsubN.ReadOnly = true;
-            this.tbPsubN.Size = new System.Drawing.Size(100, 159);
-            this.tbPsubN.TabIndex = 1;
+            this.tbPn.Location = new System.Drawing.Point(42, 90);
+            this.tbPn.Multiline = true;
+            this.tbPn.Name = "tbPn";
+            this.tbPn.PlaceholderText = "Pn";
+            this.tbPn.ReadOnly = true;
+            this.tbPn.Size = new System.Drawing.Size(100, 159);
+            this.tbPn.TabIndex = 1;
             // 
             // tbL
             // 
@@ -95,23 +95,23 @@
             this.tbL.Size = new System.Drawing.Size(100, 23);
             this.tbL.TabIndex = 2;
             // 
-            // tbLsubQ
+            // tbLq
             // 
-            this.tbLsubQ.Location = new System.Drawing.Point(42, 60);
-            this.tbLsubQ.Name = "tbLsubQ";
-            this.tbLsubQ.PlaceholderText = "Lq";
-            this.tbLsubQ.ReadOnly = true;
-            this.tbLsubQ.Size = new System.Drawing.Size(100, 23);
-            this.tbLsubQ.TabIndex = 3;
+            this.tbLq.Location = new System.Drawing.Point(42, 60);
+            this.tbLq.Name = "tbLq";
+            this.tbLq.PlaceholderText = "Lq";
+            this.tbLq.ReadOnly = true;
+            this.tbLq.Size = new System.Drawing.Size(100, 23);
+            this.tbLq.TabIndex = 3;
             // 
-            // tbLsubN
+            // tbLn
             // 
-            this.tbLsubN.Location = new System.Drawing.Point(42, 90);
-            this.tbLsubN.Name = "tbLsubN";
-            this.tbLsubN.PlaceholderText = "Ln";
-            this.tbLsubN.ReadOnly = true;
-            this.tbLsubN.Size = new System.Drawing.Size(100, 23);
-            this.tbLsubN.TabIndex = 4;
+            this.tbLn.Location = new System.Drawing.Point(42, 90);
+            this.tbLn.Name = "tbLn";
+            this.tbLn.PlaceholderText = "Ln";
+            this.tbLn.ReadOnly = true;
+            this.tbLn.Size = new System.Drawing.Size(100, 23);
+            this.tbLn.TabIndex = 4;
             // 
             // tbW
             // 
@@ -122,23 +122,23 @@
             this.tbW.Size = new System.Drawing.Size(100, 23);
             this.tbW.TabIndex = 5;
             // 
-            // tbWsubQ
+            // tbWq
             // 
-            this.tbWsubQ.Location = new System.Drawing.Point(42, 60);
-            this.tbWsubQ.Name = "tbWsubQ";
-            this.tbWsubQ.PlaceholderText = "Wq";
-            this.tbWsubQ.ReadOnly = true;
-            this.tbWsubQ.Size = new System.Drawing.Size(100, 23);
-            this.tbWsubQ.TabIndex = 6;
+            this.tbWq.Location = new System.Drawing.Point(42, 60);
+            this.tbWq.Name = "tbWq";
+            this.tbWq.PlaceholderText = "Wq";
+            this.tbWq.ReadOnly = true;
+            this.tbWq.Size = new System.Drawing.Size(100, 23);
+            this.tbWq.TabIndex = 6;
             // 
-            // tbWsubN
+            // tbWn
             // 
-            this.tbWsubN.Location = new System.Drawing.Point(42, 90);
-            this.tbWsubN.Name = "tbWsubN";
-            this.tbWsubN.PlaceholderText = "Wn";
-            this.tbWsubN.ReadOnly = true;
-            this.tbWsubN.Size = new System.Drawing.Size(100, 23);
-            this.tbWsubN.TabIndex = 7;
+            this.tbWn.Location = new System.Drawing.Point(42, 90);
+            this.tbWn.Name = "tbWn";
+            this.tbWn.PlaceholderText = "Wn";
+            this.tbWn.ReadOnly = true;
+            this.tbWn.Size = new System.Drawing.Size(100, 23);
+            this.tbWn.TabIndex = 7;
             // 
             // tbRo
             // 
@@ -247,8 +247,8 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbRo);
-            this.groupBox1.Controls.Add(this.tbPsubN);
-            this.groupBox1.Controls.Add(this.tbPsubZero);
+            this.groupBox1.Controls.Add(this.tbPn);
+            this.groupBox1.Controls.Add(this.tbP0);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(160, 266);
@@ -261,8 +261,8 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.tbLsubN);
-            this.groupBox2.Controls.Add(this.tbLsubQ);
+            this.groupBox2.Controls.Add(this.tbLn);
+            this.groupBox2.Controls.Add(this.tbLq);
             this.groupBox2.Controls.Add(this.tbL);
             this.groupBox2.Location = new System.Drawing.Point(178, 12);
             this.groupBox2.Name = "groupBox2";
@@ -276,8 +276,8 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.tbWsubN);
-            this.groupBox3.Controls.Add(this.tbWsubQ);
+            this.groupBox3.Controls.Add(this.tbWn);
+            this.groupBox3.Controls.Add(this.tbWq);
             this.groupBox3.Controls.Add(this.tbW);
             this.groupBox3.Location = new System.Drawing.Point(178, 148);
             this.groupBox3.Name = "groupBox3";
@@ -285,56 +285,6 @@
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tiempo esperado";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btCalcularCosto);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.tbCS);
-            this.groupBox4.Controls.Add(this.tbCTSE);
-            this.groupBox4.Controls.Add(this.tbCTS);
-            this.groupBox4.Controls.Add(this.tbCTE);
-            this.groupBox4.Location = new System.Drawing.Point(344, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(160, 189);
-            this.groupBox4.TabIndex = 22;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Costos";
-            // 
-            // tbCS
-            // 
-            this.tbCS.Location = new System.Drawing.Point(47, 120);
-            this.tbCS.Name = "tbCS";
-            this.tbCS.PlaceholderText = "CS";
-            this.tbCS.Size = new System.Drawing.Size(100, 23);
-            this.tbCS.TabIndex = 3;
-            // 
-            // tbCTSE
-            // 
-            this.tbCTSE.Location = new System.Drawing.Point(47, 90);
-            this.tbCTSE.Name = "tbCTSE";
-            this.tbCTSE.PlaceholderText = "CTSE";
-            this.tbCTSE.Size = new System.Drawing.Size(100, 23);
-            this.tbCTSE.TabIndex = 2;
-            // 
-            // tbCTS
-            // 
-            this.tbCTS.Location = new System.Drawing.Point(47, 60);
-            this.tbCTS.Name = "tbCTS";
-            this.tbCTS.PlaceholderText = "CTS";
-            this.tbCTS.Size = new System.Drawing.Size(100, 23);
-            this.tbCTS.TabIndex = 1;
-            // 
-            // tbCTE
-            // 
-            this.tbCTE.Location = new System.Drawing.Point(47, 30);
-            this.tbCTE.Name = "tbCTE";
-            this.tbCTE.PlaceholderText = "CTE";
-            this.tbCTE.Size = new System.Drawing.Size(100, 23);
-            this.tbCTE.TabIndex = 0;
             // 
             // label10
             // 
@@ -376,6 +326,24 @@
             this.label13.Text = "CS";
             this.toolTip1.SetToolTip(this.label13, "■ Costo unitario por el servidor.");
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btCalcularCosto);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.tbCS);
+            this.groupBox4.Controls.Add(this.tbCTSE);
+            this.groupBox4.Controls.Add(this.tbCTS);
+            this.groupBox4.Controls.Add(this.tbCTE);
+            this.groupBox4.Location = new System.Drawing.Point(344, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(160, 189);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Costos";
+            // 
             // btCalcularCosto
             // 
             this.btCalcularCosto.Location = new System.Drawing.Point(47, 149);
@@ -384,6 +352,38 @@
             this.btCalcularCosto.TabIndex = 22;
             this.btCalcularCosto.Text = "Calcular";
             this.btCalcularCosto.UseVisualStyleBackColor = true;
+            // 
+            // tbCS
+            // 
+            this.tbCS.Location = new System.Drawing.Point(47, 120);
+            this.tbCS.Name = "tbCS";
+            this.tbCS.PlaceholderText = "CS";
+            this.tbCS.Size = new System.Drawing.Size(100, 23);
+            this.tbCS.TabIndex = 3;
+            // 
+            // tbCTSE
+            // 
+            this.tbCTSE.Location = new System.Drawing.Point(47, 90);
+            this.tbCTSE.Name = "tbCTSE";
+            this.tbCTSE.PlaceholderText = "CTSE";
+            this.tbCTSE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTSE.TabIndex = 2;
+            // 
+            // tbCTS
+            // 
+            this.tbCTS.Location = new System.Drawing.Point(47, 60);
+            this.tbCTS.Name = "tbCTS";
+            this.tbCTS.PlaceholderText = "CTS";
+            this.tbCTS.Size = new System.Drawing.Size(100, 23);
+            this.tbCTS.TabIndex = 1;
+            // 
+            // tbCTE
+            // 
+            this.tbCTE.Location = new System.Drawing.Point(47, 30);
+            this.tbCTE.Name = "tbCTE";
+            this.tbCTE.PlaceholderText = "CTE";
+            this.tbCTE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTE.TabIndex = 0;
             // 
             // FormPICS
             // 
@@ -411,14 +411,14 @@
 
         #endregion
 
-        private TextBox tbPsubZero;
-        private TextBox tbPsubN;
+        private TextBox tbP0;
+        private TextBox tbPn;
         private TextBox tbL;
-        private TextBox tbLsubQ;
-        private TextBox tbLsubN;
+        private TextBox tbLq;
+        private TextBox tbLn;
         private TextBox tbW;
-        private TextBox tbWsubQ;
-        private TextBox tbWsubN;
+        private TextBox tbWq;
+        private TextBox tbWn;
         private TextBox tbRo;
         private Label label1;
         private Label label2;

@@ -9,7 +9,7 @@ namespace TCTS
             tbPoblacion.Enabled = false;
             tbServidor.Focus();
         }
-        validate o = new validate();
+        Validate o = new Validate();
         private bool condicionPoblacion = false;//infinita
         private bool condicionServidor = false;//1
         private void btResolver_Click(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace TCTS
             o.K(tbServidor.Text);
             o.N(tbN.Text);
             o.M(tbPoblacion.Text);
-            //que N no acepte 0
+            
             if(condicionPoblacion == false && condicionServidor == false)
             {
                 FormPICS ventana = new FormPICS(o.Lambda(),o.Miu(),o.K(),o.N());

@@ -46,7 +46,7 @@ namespace TCTS
         }
         #endregion
 
-        public double calcularP0()
+        private double calcularP0()
         {
             double sumatoria = 0;
             for (int i = 0; i <= M; i++)
@@ -55,38 +55,38 @@ namespace TCTS
             }
             return 1 / sumatoria;
         }
-        public double calcularPe()
+        private double calcularPe()
         {
             return 1 - P0;
         }
-        public List<double> calcularPn(int n)
+        private List<double> calcularPn(int n)
         {
             List<double> lista = new List<double>();
             for(int i = 1; i <= n; i++)
                 lista.Add(formula(i) * P0);
             return lista;
         }
-        public double calcularL()
+        private double calcularL()
         {
             return M - (Miu / Lambda) * Pe;
         }
-        public double calcularLq()
+        private double calcularLq()
         {
             return M - ((Lambda + Miu) / Lambda) * Pe;
         }
-        public double calcularLn()
+        private double calcularLn()
         {
             return Lq / Pe;
         }
-        public double calcularWq()
+        private double calcularWq()
         {
             return Lq / ((M - L) * Miu);
         }
-        public double calcularW()
+        private double calcularW()
         {
             return Wq + (1 / Miu);
         }
-        public double calcularWn()
+        private double calcularWn()
         {
             return Wq / Pe;
         }

@@ -60,7 +60,7 @@ namespace TCTS
         
         #endregion
 
-        public double calcularP0()
+        private double calcularP0()
         {
             double sumatoria1 = 0;
             double sumatoria2 = 0;
@@ -74,7 +74,7 @@ namespace TCTS
             }
             return 1 / (sumatoria1 + sumatoria2);
         }
-        public List<double> calcularPn(int ini, int fin)
+        private List<double> calcularPn(int ini, int fin)
         {
             List<double> lista = new List<double>();
             for(int i = ini; i <= fin; i++)
@@ -86,7 +86,7 @@ namespace TCTS
             }
             return lista;
         }
-        public double calcularPe()
+        private double calcularPe()
         {
             double sumatoria = 0;
             List<double> lista = new List<double>();
@@ -97,11 +97,11 @@ namespace TCTS
             }
             return 1 - sumatoria;
         }
-        public double calcularPNe()
+        private double calcularPNe()
         {
             return 1 - Pe;
         }
-        public double calcularL()//*
+        private double calcularL()//*
         {
             List<double> lista1 = calcularPn(0,K-1);
             List<double> lista2 = calcularPn(K,M);
@@ -123,7 +123,7 @@ namespace TCTS
 
             return sumatoria1 + sumatoria2 + (K * (1 - sumatoria3));
         }
-        public double calcularLq()//*
+        private double calcularLq()//*
         {
             List<double> lista = calcularPn(K,M);
             double sumatoria = 0;
@@ -133,19 +133,19 @@ namespace TCTS
             }
             return sumatoria;
         }
-        public double calcularLn()
+        private double calcularLn()
         {
             return Lq / Pe;
         }
-        public double calcularWq()
+        private double calcularWq()
         {
             return Lq / Math.Pow(M - L,Lambda);
         }
-        public double calcularW()
+        private double calcularW()
         {
             return Wq + (1 / Miu);
         }
-        public double calcularWn()
+        private double calcularWn()
         {
             return Wq / Pe;
         }
