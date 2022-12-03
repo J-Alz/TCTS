@@ -13,22 +13,44 @@ namespace TCTS
         string k = "";
         string n = "";
         string m = "";
-
-        public int Lambda(){ return int.Parse(lambda); }
-        public void Lambda(string value){lambda = (value == "") ? "0":value;}
-
-        public int Miu() { return int.Parse(miu); }
-        public void Miu(string value) { miu = (value == "") ? "0" : value; }
-
-        public int K() { return int.Parse(k); }
-        public void K(string value) { k = (value == "") ? "0" : value; }
-
-        public int N() { return int.Parse(n); }
-        public void N(string value) { n = (value == "") ? "0" : value; }
-
-        public int M() { return int.Parse(m); }
-        public void M(string value) { m = (value == "") ? "0" : value; }
+        public Validate(string lambda, string miu, string k, string n, string m)
+        {
+            this.lambda = lambda;
+            this.miu = miu;
+            this.k = k;
+            this.n = n;
+            this.m = m;
+        }
         
-        
+
+        public double Lambda(){
+            string value;
+            value = (lambda == "") ? "0":lambda;
+            return double.Parse(value); 
+        }
+        public double Miu()
+        {
+            string value;
+            value = (miu == "") ? "0" : miu;
+            return double.Parse(value);
+        }
+        public int K()
+        {
+            string value;
+            value = (k == "") ? "0" : k;
+            return int.Parse(value);
+        }
+        public int N()
+        {
+            string value;
+            value = (n == "") ? "0" : n;
+            return int.Parse(value);
+        }
+        public int M()
+        {
+            string value;
+            value = (m == "") ? "0" : m;
+            return int.Parse(value);
+        } 
     }
 }

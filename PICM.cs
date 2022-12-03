@@ -45,7 +45,7 @@ namespace TCTS
         #region formulas
         private double formula1(int value)
         {
-            return Math.Pow(Lambda / Miu, value) / factorial(value);
+            return Math.Pow(Lambda/Miu, value) / factorial(value);
         }
         private double formula2()
         {
@@ -68,7 +68,8 @@ namespace TCTS
             {
                 sumatoria += formula1(i);
             }
-            return 1 / (sumatoria + formula1(K) + formula2());
+            return 1 / (sumatoria + formula1(K) * formula2());
+            
         }
         private double calcularPk()
         {
@@ -82,8 +83,8 @@ namespace TCTS
         {
             List<double> result = new List<double>();
             for(int i = 1; i <= n; i++)
-                if (i >= K)
-                    result.Add(0 * formula1(i));
+                if (i < K)
+                    result.Add(P0 * formula1(i));
                 else
                     result.Add(P0 * (Math.Pow(Lambda/Miu,i)/factorial(K)) * (1/Math.Pow(K,i - K)));
             return result;

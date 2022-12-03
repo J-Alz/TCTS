@@ -24,8 +24,8 @@ namespace TCTS
             L = calcularL();
             Lq = calcularLq();
             Ln = calcularLn();
-            W = calcularW();
             Wq = calcularWq();
+            W = calcularW();
             Wn = calcularWn();
         }
 
@@ -101,7 +101,7 @@ namespace TCTS
         {
             return 1 - Pe;
         }
-        private double calcularL()//*
+        private double calcularL()
         {
             List<double> lista1 = calcularPn(0,K-1);
             List<double> lista2 = calcularPn(K,M);
@@ -112,24 +112,27 @@ namespace TCTS
             {
                 sumatoria1 += (i * lista1[i]);
             }
+            int j = 0;
             for(int i = K; i <= M; i++)
             {
-                sumatoria2 += (i - K) * lista2[i];
+                sumatoria2 += (i - K) * lista2[j];
+                j++;
             }
             foreach(double elemento in lista1)
             {
                 sumatoria3 += elemento;
             }
-
             return sumatoria1 + sumatoria2 + (K * (1 - sumatoria3));
         }
-        private double calcularLq()//*
+        private double calcularLq()
         {
             List<double> lista = calcularPn(K,M);
             double sumatoria = 0;
+            int j = 0;
             for(int i = K; i<= M; i++)
             {
-                sumatoria += (i - K) * lista[i];
+                sumatoria += (i - K) * lista[j];
+                j++;
             }
             return sumatoria;
         }

@@ -14,7 +14,7 @@ namespace TCTS
     {
         PICM picm;
         int n;
-        public FormPICM(int lambda, int miu, int k, int n)
+        public FormPICM(double lambda, double miu, int k, int n)
         {
             InitializeComponent();
             this.n = n;
@@ -23,23 +23,23 @@ namespace TCTS
 
         private void FormPICM_Load(object sender, EventArgs e)
         {
-            tbP0.Text = picm.P0.ToString();
-            tbPk.Text = picm.Pk.ToString();
-            tbPNe.Text = picm.PNe.ToString();
+            tbP0.Text = picm.P0.ToString("N2");
+            tbPk.Text = picm.Pk.ToString("N2");
+            tbPNe.Text = picm.PNe.ToString("N2");
             for (int i = 0; i < n; i++)
             {
-                tbPn.Text = "P(" + (i + 1) + ") = " +
-                    picm.Pn[i].ToString() +
+                tbPn.Text += "P(" + (i + 1) + ") = " +
+                    picm.Pn[i].ToString("N2") +
                     string.Format(Environment.NewLine);
             }
 
-            tbL.Text = picm.L.ToString();
-            tbLq.Text = picm.Lq.ToString();
-            tbLn.Text = picm.Ln.ToString();
+            tbL.Text = picm.L.ToString("N2");
+            tbLq.Text = picm.Lq.ToString("N2");
+            tbLn.Text = picm.Ln.ToString("N2");
 
-            tbW.Text = picm.W.ToString();
-            tbWq.Text = picm.Wq.ToString();
-            tbWn.Text = picm.Wn.ToString();
+            tbW.Text = picm.W.ToString("N2");
+            tbWq.Text = picm.Wq.ToString("N2");
+            tbWn.Text = picm.Wn.ToString("N2");
 
         }
     }

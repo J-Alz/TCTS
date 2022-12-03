@@ -7,9 +7,8 @@ namespace TCTS
         {
             InitializeComponent();
             tbPoblacion.Enabled = false;
-            tbServidor.Focus();
         }
-        Validate o = new Validate();
+        Validate validate;
         private bool condicionPoblacion = false;//infinita
         private bool condicionServidor = false;//1
         private void btResolver_Click(object sender, EventArgs e)
@@ -18,31 +17,33 @@ namespace TCTS
                 condicionPoblacion = true; else condicionPoblacion = false;
             if (tbServidor.Text != "1")
                 condicionServidor = true; else condicionServidor = false;
-
-            o.Lambda(tbLambda.Text);
-            o.Miu(tbMiu.Text);
-            o.K(tbServidor.Text);
-            o.N(tbN.Text);
-            o.M(tbPoblacion.Text);
+            validate = new Validate(tbLambda.Text,
+                tbMiu.Text,
+                tbServidor.Text,
+                tbN.Text, tbPoblacion.Text);
             
             if(condicionPoblacion == false && condicionServidor == false)
             {
-                FormPICS ventana = new FormPICS(o.Lambda(),o.Miu(),o.K(),o.N());
+                FormPICS ventana = new FormPICS(validate.Lambda(),
+                    validate.Miu(),validate.K(),validate.N());
                 ventana.Show();
             }
             if (condicionPoblacion == false && condicionServidor == true)
             {
-                FormPICM ventana = new(o.Lambda(),o.Miu(),o.K(),o.N());
+                FormPICM ventana = new FormPICM(validate.Lambda(),
+                    validate.Miu(),validate.K(),validate.N());
                 ventana.Show();
             }
             if (condicionPoblacion == true && condicionServidor == false)
             {
-                FormPFCS ventana = new FormPFCS(o.Lambda(), o.Miu(), o.K(), o.N(), o.M());
+                FormPFCS ventana = new FormPFCS(validate.Lambda(),
+                    validate.Miu(),validate.K(),validate.N(),validate.M());
                 ventana.Show();
             }
             if(condicionPoblacion == true && condicionServidor == true)
             {
-                FormPFCM ventana = new FormPFCM(o.Lambda(),o.Miu(),o.K(),o.N(),o.M());
+                FormPFCM ventana = new FormPFCM(validate.Lambda(),
+                    validate.Miu(),validate.K(),validate.N(),validate.M());
                 ventana.Show();
             }
         }
@@ -90,7 +91,7 @@ namespace TCTS
         private void tbLambda_TextChanged(object sender, EventArgs e)
         {
             //es un nùmero decimal, no entero
-            if (!Regex.IsMatch(tbLambda.Text, "^[0-9]+([.])?([0-9]+)?$"))
+            if (!Regex.IsMatch(tbLambda.Text, "^[0-9]+([,])?([0-9]+)?$"))
             {
                 tbLambda.Clear();
             }
@@ -98,7 +99,7 @@ namespace TCTS
         private void tbMiu_TextChanged(object sender, EventArgs e)
         {
             //es un número decimal, no entero
-            if (!Regex.IsMatch(tbMiu.Text, "^[0-9]+([.])?([0-9]+)?$"))
+            if (!Regex.IsMatch(tbMiu.Text, "^[0-9]+([,])?([0-9]+)?$"))
             {
                 tbMiu.Clear();
             }

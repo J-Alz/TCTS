@@ -22,8 +22,8 @@ namespace TCTS
             L = calcularL();
             Lq = calcularLq();
             Ln = calcularLn();
-            W = calcularW();
             Wq = calcularWq();
+            W = calcularW();
             Wn = calcularWn();
         }
 
@@ -42,7 +42,7 @@ namespace TCTS
 
         #region formulas
         private double formula(int n){
-            return factorial(M) / factorial(M - n)! * Math.Pow(Lambda/Miu,n);
+            return factorial(M) / factorial(M - n) * Math.Pow(Lambda/Miu,n);
         }
         #endregion
 
@@ -62,8 +62,9 @@ namespace TCTS
         private List<double> calcularPn(int n)
         {
             List<double> lista = new List<double>();
+
             for(int i = 1; i <= n; i++)
-                lista.Add(formula(i) * P0);
+                lista.Add(formula(i) * P0);  
             return lista;
         }
         private double calcularL()
@@ -80,7 +81,7 @@ namespace TCTS
         }
         private double calcularWq()
         {
-            return Lq / ((M - L) * Miu);
+            return Lq / ((M - L) * Lambda);
         }
         private double calcularW()
         {
