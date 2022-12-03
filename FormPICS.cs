@@ -40,5 +40,10 @@ namespace TCTS
             tbWq.Text = pics.Wq.ToString("N2");
             tbWn.Text = pics.Wn.ToString("N2");
         }
+
+        private void btCalcularCosto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

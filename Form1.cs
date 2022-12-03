@@ -24,15 +24,40 @@ namespace TCTS
             
             if(condicionPoblacion == false && condicionServidor == false)
             {
-                FormPICS ventana = new FormPICS(validate.Lambda(),
-                    validate.Miu(),validate.K(),validate.N());
-                ventana.Show();
+                //comprobacion sencilla de inestabilidad, TODO mejorar
+                if (validate.Lambda() / validate.Miu() > 1)
+                {
+                    MessageBox.Show("Sistema inestable");
+                    tbLambda.Clear();
+                    tbMiu.Clear();
+                    tbLambda.Focus();
+                }
+                else
+                {
+                    FormPICS ventana = new FormPICS(validate.Lambda(),
+                        validate.Miu(), validate.K(), validate.N());
+                    ventana.Show();
+                }
+                
             }
             if (condicionPoblacion == false && condicionServidor == true)
             {
-                FormPICM ventana = new FormPICM(validate.Lambda(),
-                    validate.Miu(),validate.K(),validate.N());
-                ventana.Show();
+                //comprobacíón sencilla de inestabilidad, TODO mejorar
+                if(validate.Lambda() / (validate.Miu() * validate.K()) > 1)
+                {
+                    //TODO mejorar mensaje de inestabilidad
+                    MessageBox.Show("Sistema inestable");
+                    tbLambda.Clear();
+                    tbMiu.Clear();
+                    tbLambda.Focus();
+                }
+                else
+                {
+                    FormPICM ventana = new FormPICM(validate.Lambda(),
+                        validate.Miu(), validate.K(), validate.N());
+                    ventana.Show();
+                }
+                
             }
             if (condicionPoblacion == true && condicionServidor == false)
             {

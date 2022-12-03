@@ -294,7 +294,8 @@
             this.label10.Size = new System.Drawing.Size(33, 15);
             this.label10.TabIndex = 18;
             this.label10.Text = "CTSE";
-            this.toolTip1.SetToolTip(this.label10, "■ Costo unitario por tiempo de servicio");
+            this.toolTip1.SetToolTip(this.label10, "■ Costo unitario por tiempo de servicio.\r\n■ Tiempo en el servicio de los clientes" +
+        ".\r\n");
             // 
             // label11
             // 
@@ -304,7 +305,8 @@
             this.label11.Size = new System.Drawing.Size(27, 15);
             this.label11.TabIndex = 19;
             this.label11.Text = "CTS";
-            this.toolTip1.SetToolTip(this.label11, "■ Costo unitario por tiempo en el sistema");
+            this.toolTip1.SetToolTip(this.label11, "■ Costo unitario por tiempo en el sistema.\r\n■ Tiempo en el sistema de los cliente" +
+        "s.\r\n");
             // 
             // label12
             // 
@@ -314,7 +316,7 @@
             this.label12.Size = new System.Drawing.Size(27, 15);
             this.label12.TabIndex = 20;
             this.label12.Text = "CTE";
-            this.toolTip1.SetToolTip(this.label12, "■ Costo unitario por tiempo en cola");
+            this.toolTip1.SetToolTip(this.label12, "■ Costo unitario por tiempo en cola.\r\n■ Tiempo de espera de los clientes.");
             // 
             // label13
             // 
@@ -324,7 +326,7 @@
             this.label13.Size = new System.Drawing.Size(21, 15);
             this.label13.TabIndex = 21;
             this.label13.Text = "CS";
-            this.toolTip1.SetToolTip(this.label13, "■ Costo unitario por el servidor.");
+            this.toolTip1.SetToolTip(this.label13, "■ Costo unitario por el servidor.\r\n■ Alquiler\r\n■ Salario\r\n■ Funcionamiento");
             // 
             // groupBox4
             // 
@@ -339,10 +341,10 @@
             this.groupBox4.Controls.Add(this.tbCTE);
             this.groupBox4.Location = new System.Drawing.Point(344, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(160, 189);
+            this.groupBox4.Size = new System.Drawing.Size(160, 180);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Costos";
+            this.groupBox4.Text = "Costos Unitarios";
             // 
             // btCalcularCosto
             // 
@@ -352,6 +354,7 @@
             this.btCalcularCosto.TabIndex = 22;
             this.btCalcularCosto.Text = "Calcular";
             this.btCalcularCosto.UseVisualStyleBackColor = true;
+            this.btCalcularCosto.Click += new System.EventHandler(this.btCalcularCosto_Click);
             // 
             // tbCS
             // 
@@ -389,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 291);
+            this.ClientSize = new System.Drawing.Size(518, 291);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

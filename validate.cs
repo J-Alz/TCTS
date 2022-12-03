@@ -13,6 +13,10 @@ namespace TCTS
         string k = "";
         string n = "";
         string m = "";
+        string cte = "";
+        string cts = "";
+        string ctse = "";
+        string cs = "";
         public Validate(string lambda, string miu, string k, string n, string m)
         {
             this.lambda = lambda;
@@ -51,6 +55,7 @@ namespace TCTS
             string value;
             value = (m == "") ? "0" : m;
             return int.Parse(value);
-        } 
+        }
+        
     }
 }
