@@ -14,11 +14,12 @@ namespace TCTS
     {
         PICS pics;
         int n;
-        public FormPICS(double lambda, double miu, int k, int n)
+        public FormPICS(double lambda, double miu, int k, int n,
+             double cte, double cts, double ctse, double cs, double tiempo)
         {
             InitializeComponent();
             this.n = n;
-            pics = new PICS(lambda, miu, k, n);
+            pics = new PICS(lambda, miu, k, n,cte,cts,ctse,cs,tiempo);
         }
         private void FormPICS_Load(object sender, EventArgs e)
         {
@@ -36,14 +37,22 @@ namespace TCTS
             tbLq.Text = pics.Lq.ToString("N2");
             tbLn.Text = pics.Ln.ToString("N2");
 
-            tbW.Text = pics.W.ToString("N2");
-            tbWq.Text = pics.Wq.ToString("N2");
-            tbWn.Text = pics.Wn.ToString("N2");
+            tbW.Text = pics.W.ToString("N3");
+            tbWq.Text = pics.Wq.ToString("N3");
+            tbWn.Text = pics.Wn.ToString("N3");
+
+            tbCTTE.Text = pics.Ctte.ToString("N2");
+            tbCTTS.Text = pics.Ctts.ToString("N2");
+            tbCTTSE.Text = pics.Cttse.ToString("N2");
+            tbCTS.Text = pics.Cts.ToString("N2");
+            tbCT.Text = pics.Ct.ToString("N2");
+
         }
 
         private void btCalcularCosto_Click(object sender, EventArgs e)
         {
-
+            //FormCostos ventanaCosto = new FormCostos();
+            //ventanaCosto.Show();
         }
     }
 }

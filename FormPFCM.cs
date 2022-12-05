@@ -14,11 +14,12 @@ namespace TCTS
     {
         PFCM pfcm;
         int n;
-        public FormPFCM(double lambda, double miu, int k, int n, int m)
+        public FormPFCM(double lambda, double miu, int k, int n, int m,
+            double cte, double cts, double ctse, double cs, double tiempo)
         {
             InitializeComponent();
             this.n = n;
-            pfcm = new PFCM(lambda, miu, k, n, m);
+            pfcm = new PFCM(lambda, miu, k, n, m,cte,cts,ctse,cs, tiempo);
         }
         private void FormPFCM_Load(object sender, EventArgs e)
         {
@@ -36,9 +37,15 @@ namespace TCTS
             tbLq.Text = pfcm.Lq.ToString("N2");
             tbLn.Text = pfcm.Ln.ToString("N2");
 
-            tbW.Text = pfcm.W.ToString("N2");
-            tbWq.Text = pfcm.Wq.ToString("N2");
-            tbWn.Text = pfcm.Wn.ToString("N2");
+            tbW.Text = pfcm.W.ToString("N3");
+            tbWq.Text = pfcm.Wq.ToString("N3");
+            tbWn.Text = pfcm.Wn.ToString("N3");
+
+            tbCTTE.Text = pfcm.Ctte.ToString("N2");
+            tbCTTS.Text = pfcm.Ctts.ToString("N2");
+            tbCTTSE.Text = pfcm.Cttse.ToString("N2");
+            tbCTS.Text = pfcm.Cts.ToString("N2");
+            tbCT.Text = pfcm.Ct.ToString("N2");
         }
     }
 }

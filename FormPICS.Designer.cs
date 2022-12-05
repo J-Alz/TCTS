@@ -55,12 +55,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btCalcularCosto = new System.Windows.Forms.Button();
-            this.tbCS = new System.Windows.Forms.TextBox();
-            this.tbCTSE = new System.Windows.Forms.TextBox();
+            this.tbCT = new System.Windows.Forms.TextBox();
             this.tbCTS = new System.Windows.Forms.TextBox();
-            this.tbCTE = new System.Windows.Forms.TextBox();
+            this.tbCTTSE = new System.Windows.Forms.TextBox();
+            this.tbCTTS = new System.Windows.Forms.TextBox();
+            this.tbCTTE = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -289,110 +291,132 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 90);
+            this.label10.Location = new System.Drawing.Point(12, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 15);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "CTSE";
-            this.toolTip1.SetToolTip(this.label10, "■ Costo unitario por tiempo de servicio.\r\n■ Tiempo en el servicio de los clientes" +
-        ".\r\n");
+            this.label10.TabIndex = 0;
+            this.label10.Text = "CTTE";
+            this.toolTip1.SetToolTip(this.label10, "■ Costo diario por el tiempo de espera en cola.");
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 60);
+            this.label11.Location = new System.Drawing.Point(12, 160);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "CTS";
-            this.toolTip1.SetToolTip(this.label11, "■ Costo unitario por tiempo en el sistema.\r\n■ Tiempo en el sistema de los cliente" +
-        "s.\r\n");
+            this.label11.Size = new System.Drawing.Size(21, 15);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "CT";
+            this.toolTip1.SetToolTip(this.label11, "■ Costo total diario del sistema.");
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 30);
+            this.label12.Location = new System.Drawing.Point(12, 60);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 15);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "CTE";
-            this.toolTip1.SetToolTip(this.label12, "■ Costo unitario por tiempo en cola.\r\n■ Tiempo de espera de los clientes.");
+            this.label12.Size = new System.Drawing.Size(33, 15);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "CTTS";
+            this.toolTip1.SetToolTip(this.label12, "■ Costo diario por el tiempo en el sistema.");
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(12, 120);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 15);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "CS";
-            this.toolTip1.SetToolTip(this.label13, "■ Costo unitario por el servidor.\r\n■ Alquiler\r\n■ Salario\r\n■ Funcionamiento");
+            this.label13.Size = new System.Drawing.Size(27, 15);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "CTS";
+            this.toolTip1.SetToolTip(this.label13, "■ Costo diario del servidor.");
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 90);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "CTTSE";
+            this.toolTip1.SetToolTip(this.label14, "■ Costo diario por el tiempo de servicio.");
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btCalcularCosto);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.tbCS);
-            this.groupBox4.Controls.Add(this.tbCTSE);
+            this.groupBox4.Controls.Add(this.tbCT);
             this.groupBox4.Controls.Add(this.tbCTS);
-            this.groupBox4.Controls.Add(this.tbCTE);
+            this.groupBox4.Controls.Add(this.tbCTTSE);
+            this.groupBox4.Controls.Add(this.tbCTTS);
+            this.groupBox4.Controls.Add(this.tbCTTE);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Location = new System.Drawing.Point(344, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(160, 180);
+            this.groupBox4.Size = new System.Drawing.Size(200, 200);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Costos Unitarios";
+            this.groupBox4.Text = "Costos Totales";
             // 
-            // btCalcularCosto
+            // tbCT
             // 
-            this.btCalcularCosto.Location = new System.Drawing.Point(47, 149);
-            this.btCalcularCosto.Name = "btCalcularCosto";
-            this.btCalcularCosto.Size = new System.Drawing.Size(75, 23);
-            this.btCalcularCosto.TabIndex = 22;
-            this.btCalcularCosto.Text = "Calcular";
-            this.btCalcularCosto.UseVisualStyleBackColor = true;
-            this.btCalcularCosto.Click += new System.EventHandler(this.btCalcularCosto_Click);
-            // 
-            // tbCS
-            // 
-            this.tbCS.Location = new System.Drawing.Point(47, 120);
-            this.tbCS.Name = "tbCS";
-            this.tbCS.PlaceholderText = "CS";
-            this.tbCS.Size = new System.Drawing.Size(100, 23);
-            this.tbCS.TabIndex = 3;
-            // 
-            // tbCTSE
-            // 
-            this.tbCTSE.Location = new System.Drawing.Point(47, 90);
-            this.tbCTSE.Name = "tbCTSE";
-            this.tbCTSE.PlaceholderText = "CTSE";
-            this.tbCTSE.Size = new System.Drawing.Size(100, 23);
-            this.tbCTSE.TabIndex = 2;
+            this.tbCT.Location = new System.Drawing.Point(60, 160);
+            this.tbCT.Name = "tbCT";
+            this.tbCT.PlaceholderText = "CT";
+            this.tbCT.ReadOnly = true;
+            this.tbCT.Size = new System.Drawing.Size(100, 23);
+            this.tbCT.TabIndex = 10;
             // 
             // tbCTS
             // 
-            this.tbCTS.Location = new System.Drawing.Point(47, 60);
+            this.tbCTS.Location = new System.Drawing.Point(60, 120);
             this.tbCTS.Name = "tbCTS";
             this.tbCTS.PlaceholderText = "CTS";
+            this.tbCTS.ReadOnly = true;
             this.tbCTS.Size = new System.Drawing.Size(100, 23);
-            this.tbCTS.TabIndex = 1;
+            this.tbCTS.TabIndex = 9;
             // 
-            // tbCTE
+            // tbCTTSE
             // 
-            this.tbCTE.Location = new System.Drawing.Point(47, 30);
-            this.tbCTE.Name = "tbCTE";
-            this.tbCTE.PlaceholderText = "CTE";
-            this.tbCTE.Size = new System.Drawing.Size(100, 23);
-            this.tbCTE.TabIndex = 0;
+            this.tbCTTSE.Location = new System.Drawing.Point(60, 90);
+            this.tbCTTSE.Name = "tbCTTSE";
+            this.tbCTTSE.PlaceholderText = "CTTSE";
+            this.tbCTTSE.ReadOnly = true;
+            this.tbCTTSE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTTSE.TabIndex = 8;
+            // 
+            // tbCTTS
+            // 
+            this.tbCTTS.Location = new System.Drawing.Point(60, 60);
+            this.tbCTTS.Name = "tbCTTS";
+            this.tbCTTS.PlaceholderText = "CTTS";
+            this.tbCTTS.ReadOnly = true;
+            this.tbCTTS.Size = new System.Drawing.Size(100, 23);
+            this.tbCTTS.TabIndex = 8;
+            // 
+            // tbCTTE
+            // 
+            this.tbCTTE.Location = new System.Drawing.Point(60, 30);
+            this.tbCTTE.Name = "tbCTTE";
+            this.tbCTTE.PlaceholderText = "CTTE";
+            this.tbCTTE.ReadOnly = true;
+            this.tbCTTE.Size = new System.Drawing.Size(100, 23);
+            this.tbCTTE.TabIndex = 7;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 140);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(207, 15);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "----------------------------------------";
             // 
             // FormPICS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 291);
+            this.ClientSize = new System.Drawing.Size(556, 291);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -437,14 +461,16 @@
         private GroupBox groupBox3;
         private ToolTip toolTip1;
         private GroupBox groupBox4;
-        private TextBox tbCS;
-        private TextBox tbCTSE;
+        private TextBox tbCT;
         private TextBox tbCTS;
-        private TextBox tbCTE;
-        private Label label13;
-        private Label label12;
-        private Label label11;
+        private TextBox tbCTTSE;
+        private TextBox tbCTTS;
+        private TextBox tbCTTE;
         private Label label10;
-        private Button btCalcularCosto;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private Label label15;
     }
 }

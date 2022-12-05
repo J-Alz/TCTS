@@ -14,11 +14,12 @@ namespace TCTS
     {
         PICM picm;
         int n;
-        public FormPICM(double lambda, double miu, int k, int n)
+        public FormPICM(double lambda, double miu, int k, int n,
+            double cte, double cts, double ctse, double cs, double tiempo)
         {
             InitializeComponent();
             this.n = n;
-            picm = new PICM(lambda, miu, k, n);
+            picm = new PICM(lambda, miu, k, n,cte,cts,ctse,cs,tiempo);
         }
 
         private void FormPICM_Load(object sender, EventArgs e)
@@ -37,9 +38,15 @@ namespace TCTS
             tbLq.Text = picm.Lq.ToString("N2");
             tbLn.Text = picm.Ln.ToString("N2");
 
-            tbW.Text = picm.W.ToString("N2");
-            tbWq.Text = picm.Wq.ToString("N2");
-            tbWn.Text = picm.Wn.ToString("N2");
+            tbW.Text = picm.W.ToString("N3");
+            tbWq.Text = picm.Wq.ToString("N3");
+            tbWn.Text = picm.Wn.ToString("N3");
+
+            tbCTTE.Text = picm.Ctte.ToString("N2");
+            tbCTTS.Text = picm.Ctts.ToString("N2");
+            tbCTTSE.Text = picm.Cttse.ToString("N2");
+            tbCTS.Text = picm.Cts.ToString("N2");
+            tbCT.Text = picm.Ct.ToString("N2");
 
         }
     }

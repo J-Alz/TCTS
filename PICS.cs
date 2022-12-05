@@ -10,11 +10,13 @@ namespace TCTS
     {
         
         private double ro;
-        public PICS(double lambda, double miu, int k, int n)
+        public PICS(double lambda, double miu, int k, int n, 
+            double cte, double cts, double ctse, double cs, double tiempo)
         {
             Lambda = lambda;    //a
             Miu = miu;          //b
             K = k;              //c
+            Tiempo = tiempo;
             Ro = calcularRo();  //1
             P0 = calcularP0();  //2
             Pn = calcularPn(n); //3 *
@@ -24,6 +26,11 @@ namespace TCTS
             W = calcularW();    //7
             Wq = calcularWq();  //8
             Wn = calcularWn();  //9
+            Ctte = calcularCTTE(cte);
+            Ctts = calcularCTTS(cts);
+            Cttse = calcularCTTSE(ctse);
+            Cts = calcularCTS(cs);
+            Ct = calcularCT();
         }
 
         #region get/Set Ro

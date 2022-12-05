@@ -8,6 +8,7 @@ namespace TCTS
             InitializeComponent();
             tbPoblacion.Enabled = false;
         }
+        //TODO agregar horas de trabajo
         Validate validate;
         private bool condicionPoblacion = false;//infinita
         private bool condicionServidor = false;//1
@@ -18,9 +19,8 @@ namespace TCTS
             if (tbServidor.Text != "1")
                 condicionServidor = true; else condicionServidor = false;
             validate = new Validate(tbLambda.Text,
-                tbMiu.Text,
-                tbServidor.Text,
-                tbN.Text, tbPoblacion.Text);
+                tbMiu.Text,tbServidor.Text,tbN.Text, tbPoblacion.Text,
+                tbCTE.Text, tbCTS.Text, tbCTSE.Text, tbCS.Text, tbTiempo.Text);
             
             if(condicionPoblacion == false && condicionServidor == false)
             {
@@ -35,8 +35,12 @@ namespace TCTS
                 else
                 {
                     FormPICS ventana = new FormPICS(validate.Lambda(),
-                        validate.Miu(), validate.K(), validate.N());
+                        validate.Miu(), validate.K(), validate.N(), 
+                        validate.Cte(), validate.Cts(), validate.Ctse(),
+                        validate.Cs(), validate.Time());
+                    //FormCostos ventanaCostos = new FormCostos();
                     ventana.Show();
+                    //ventanaCostos.Show();
                 }
                 
             }
@@ -53,8 +57,11 @@ namespace TCTS
                 }
                 else
                 {
+                    //double cte, double cts, double ctse, double cs
                     FormPICM ventana = new FormPICM(validate.Lambda(),
-                        validate.Miu(), validate.K(), validate.N());
+                        validate.Miu(), validate.K(), validate.N(),
+                        validate.Cte(), validate.Cts(), validate.Ctse(),
+                        validate.Cs(),validate.Time());
                     ventana.Show();
                 }
                 
@@ -62,13 +69,17 @@ namespace TCTS
             if (condicionPoblacion == true && condicionServidor == false)
             {
                 FormPFCS ventana = new FormPFCS(validate.Lambda(),
-                    validate.Miu(),validate.K(),validate.N(),validate.M());
+                    validate.Miu(),validate.K(),validate.N(),validate.M(), 
+                    validate.Cte(), validate.Cts(), validate.Ctse(),
+                    validate.Cs(), validate.Time());
                 ventana.Show();
             }
             if(condicionPoblacion == true && condicionServidor == true)
             {
                 FormPFCM ventana = new FormPFCM(validate.Lambda(),
-                    validate.Miu(),validate.K(),validate.N(),validate.M());
+                    validate.Miu(),validate.K(),validate.N(),validate.M(), 
+                    validate.Cte(), validate.Cts(), validate.Ctse(),
+                    validate.Cs(), validate.Time());
                 ventana.Show();
             }
         }
@@ -135,6 +146,46 @@ namespace TCTS
             if (!Regex.IsMatch(tbN.Text, "^[1-9]\\d*$"))
             {
                 tbN.Clear();
+            }
+        }
+        private void tbCTE_TextChanged(object sender, EventArgs e)
+        {
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbCTE.Text, "^[0-9]+([,])?([0-9]+)?$"))
+            {
+                tbCTE.Clear();
+            }
+        }
+        private void tbCTS_TextChanged(object sender, EventArgs e)
+        {
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbCTS.Text, "^[0-9]+([,])?([0-9]+)?$"))
+            {
+                tbCTS.Clear();
+            }
+        }
+        private void tbCTSE_TextChanged(object sender, EventArgs e)
+        {
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbCTSE.Text, "^[0-9]+([,])?([0-9]+)?$"))
+            {
+                tbCTSE.Clear();
+            }
+        }
+        private void tbCS_TextChanged(object sender, EventArgs e)
+        {
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbCS.Text, "^[0-9]+([,])?([0-9]+)?$"))
+            {
+                tbCS.Clear();
+            }
+        }
+        private void tbTiempo_TextChanged(object sender, EventArgs e)
+        {
+            //es un número decimal, no entero
+            if (!Regex.IsMatch(tbTiempo.Text, "^[0-9]+([,])?([0-9]+)?$"))
+            {
+                tbTiempo.Clear();
             }
         }
         #endregion

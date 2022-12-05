@@ -11,12 +11,14 @@ namespace TCTS
         int m;
         double pe;
         double pNe;
-        public PFCM(double lambda, double miu, int k, int n, int m)
+        public PFCM(double lambda, double miu, int k, int n, int m,
+            double cte, double cts, double ctse, double cs, double tiempo)
         {
             Lambda = lambda;
             Miu = miu;
             M = m;
             K = k;
+            Tiempo = tiempo;
             P0 = calcularP0();
             Pn = calcularPn(1,n);
             pe = calcularPe();
@@ -27,6 +29,11 @@ namespace TCTS
             Wq = calcularWq();
             W = calcularW();
             Wn = calcularWn();
+            Ctte = calcularCTTE(cte);
+            Ctts = calcularCTTS(cts);
+            Cttse = calcularCTTSE(ctse);
+            Cts = calcularCTS(cs);
+            Ct = calcularCT();
         }
 
         #region get/set M, Pe, PNe

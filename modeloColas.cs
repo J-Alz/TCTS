@@ -19,6 +19,14 @@ namespace TCTS
         private double w;
         private double wq;
         private double wn;
+        private double ctte;
+        private double ctts;
+        private double cttse;
+        private double cts;
+        private double ct;
+        private double tiempo;
+
+
 
         #region get/set
         public double Lambda
@@ -77,7 +85,60 @@ namespace TCTS
             get { return wn; }
             set { wn = value; }
         }
+        public double Ctte
+        {
+            get { return ctte; }
+            set { ctte = value; }
+        }
+        public double Ctts
+        {
+            get { return ctts; }
+            set { ctts = value; }
+        }
+        public double Cttse
+        {
+            get { return cttse; }
+            set { cttse = value; }
+        }
+        public double Cts
+        {
+            get { return cts; }
+            set { cts = value; }   
+        }
+        public double Ct
+        {
+            get { return ct; }
+            set { ct = value; }   
+        }
+        public double Tiempo
+        {
+            get { return tiempo; }
+            set { tiempo = value; }
+        }
+        
         #endregion
+
+        public double calcularCTTE(double value)
+        {
+            return lambda * tiempo * wq * value;
+        }
+        public double calcularCTTS(double value)
+        {
+            return lambda * tiempo * w * value;
+        }
+        public double calcularCTTSE(double value)
+        {
+            return lambda * tiempo * (1 / miu) * value;
+        }
+        public double calcularCTS(double value)
+        {
+            return k * value;
+        }
+        public double calcularCT()
+        {
+            return ctte + ctts + cttse + cts;
+        }
+
 
         public double factorial(int value)
         {

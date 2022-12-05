@@ -10,11 +10,13 @@ namespace TCTS
     {
         double pk;
         double pNe;
-        public PICM(double lambda, double miu, int k, int n)
+        public PICM(double lambda, double miu, int k, int n,
+            double cte, double cts, double ctse, double cs, double tiempo)
         {
             Lambda = lambda;
             Miu = miu;
             K = k;
+            Tiempo = tiempo;
             P0 = calcularP0();
             Pn = calcularPn(n);
             Pk = calcularPk();
@@ -25,7 +27,11 @@ namespace TCTS
             W = calcularW();
             Wq = calcularWq();
             Wn = calcularWn();
-            
+            Ctte = calcularCTTE(cte);
+            Ctts = calcularCTTS(cts);
+            Cttse = calcularCTTSE(ctse);
+            Cts = calcularCTS(cs);
+            Ct = calcularCT();
         }
 
         #region get/set pK, PNe
