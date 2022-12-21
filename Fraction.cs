@@ -8,6 +8,7 @@ namespace TCTS
 {
     public readonly struct Fraction
     {
+        
         private readonly int num;
         private readonly int den;
 
@@ -15,10 +16,15 @@ namespace TCTS
         {
             if (den == 0)
                 throw 
-                    new ArgumentException("El denominador no puede ser sero", 
+                    new ArgumentException("El denominador no puede ser cero", 
                     nameof(den));
             this.num = num;
             this.den = den;
+        }
+        public Fraction(int num)
+        {
+            this.num = num;
+            this.den = 1;
         }
         public static Fraction operator +(Fraction a) 
             => a;
@@ -37,6 +43,14 @@ namespace TCTS
             return new Fraction(a.num * b.den, a.den * b.num);
         }
         public override string ToString() => $"{num}/{den}";
-        
+        public static Fraction operator ^(Fraction a, double exp)
+        {
+
+            return new Fraction((int)Math.Pow(a.num,exp),(int)Math.Pow(a.den,exp));
+        }
+        public static double Decimal(Fraction a)
+        {
+            return a.num / a.den;
+        }
     }
 }
