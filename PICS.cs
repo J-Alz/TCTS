@@ -18,6 +18,7 @@ namespace TCTS
             K = k;              //c
             Tiempo = tiempo;
             Ro = calcularRo();  //1
+            
             P0 = calcularP0();  //2
             Pn = calcularPn(n); //3 *
             L = calcularL();    //4
@@ -39,6 +40,7 @@ namespace TCTS
             get { return ro; }
             set { ro = value; }
         }
+        
         #endregion
 
         private double calcularRo()
