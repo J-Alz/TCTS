@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TCTS
 {
-    internal class fractionPICS:modeloColas
+    internal class fractionPICS:modelo
     {
         private Fraction ro;
 
@@ -25,49 +25,33 @@ namespace TCTS
         }
         #endregion
 
-        private Fraction calcRo()
-        {
-            return new Fraction((int)Lambda,(int)Miu);
-            //Cambiar modelo colas para evitar conversión
-        }
-        private Fraction calcP0()
-        {
+        private Fraction cRo()
+            => new Fraction(Lambda,Miu);//int,int
+        private Fraction cP0()
+            => new Fraction(1) - cRo();
 
-            return new Fraction(1) - calcRo();
-        }
         private List<Fraction> calcPn(int n)
         {
             List<Fraction> result = new List<Fraction>();
             for(int i = 1; i <= n; i++)
             {
-                result.Add(calcP0() * (calcRo()^i));
+                result.Add(cP0() * (cRo()^i));
             }
             return result;
         }
-        private Fraction calcL()
-        {
-            return new Fraction((int)Lambda,(int)(Miu - Lambda));
-        }
-        private Fraction calcLq()
-        {
-            return new Fraction((int)(Lambda * Lambda),(int)(Miu * (Miu - Lambda)));
-        }
-        private Fraction calcLn()
-        {
-            return new Fraction((int)Lambda, (int)(Miu - Lambda));
-        }
-        private Fraction calcW()
-        {
-            return new Fraction(1,(int)(Miu - Lambda));
-        }
-        private Fraction calcWq()
-        {
-            return new Fraction((int)Lambda,(int)(Miu * (Miu - Lambda)));
-        }
-        private Fraction calcWn()
-        {
-            return new Fraction(1, (int)(Miu - Lambda));
-        }
+        
+        private Fraction cL()
+            => new Fraction(Lambda,Miu - Lambda);
+        private Fraction cLq()
+            => new Fraction(Lambda * Lambda, Miu * (Miu - Lambda));
+        private Fraction cLn()
+            => new Fraction(Lambda,Miu - Lambda);
+        private Fraction cW()
+            => new Fraction(1,Miu - Lambda);
+        private Fraction cWq()
+            => new Fraction(Lambda,Miu * (Miu - Lambda));
+        private Fraction cWn()
+            => new Fraction(1, Miu - Lambda);
 
 
 

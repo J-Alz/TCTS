@@ -56,6 +56,7 @@ namespace TCTS
 
             return new Fraction((int)Math.Pow(a.num, exp), (int)Math.Pow(a.den, exp));
         }
+
         public override string ToString() => $"{num}/{den}";
         
         public static double Decimal(Fraction a)

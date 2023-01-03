@@ -8,14 +8,20 @@ namespace TCTS
 {
     internal abstract class modelo
     {
-        private double lambda;
+        private int lambda;
+        private int miu;
 
-
-        public double Lambda
+        public int Lambda
         {
             get { return lambda; }
             set { lambda = value; }
         }
+        public int Miu
+        {
+            get { return miu; }
+            set { miu = value; }
+        }
+
         //TODO:
         //1. Lambda y Miu deben ser enteros por ley
         //  a. Cambiar conversiones (int) en cada modelo de cola.
